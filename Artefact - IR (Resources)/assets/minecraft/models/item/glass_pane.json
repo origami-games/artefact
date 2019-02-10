@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "block/glass_pane"
+        "layer0": "block/glass"
     },
     "overrides": [
                 { "predicate": {"custom_model_data": 1}, "model": "artefact:npc/andante"},
