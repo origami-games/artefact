@@ -1,0 +1,90 @@
+#runs every tick on the primary player
+#@s - primary player
+#called by artefact-core:tick
+
+#initial
+gamemode adventure @s[gamemode=survival]
+scoreboard players set loaded general 2
+
+#clear items
+clear @s #artefact-type:no_pickup{artefact:{no_pickup:1b}}
+execute if entity @s[nbt={Inventory:[{tag:{artefact:{item_type:["dust","no_execution"]}}}]}] run function artefact-api:items/dust/pickup/check
+
+#check scores
+execute unless score @s food_bar matches 0.. run function artefact-core:player/no_scores
+execute unless score @s max_hearts matches 1.. run function artefact-core:player/no_scores
+execute if score @s food_bar matches 0.. run tag @s remove no_scores
+
+#clock
+scoreboard players add tick_5 clock 1
+execute if score tick_5 clock matches 5.. run function artefact-core:player/tick/5
+
+#mana
+execute if score mana spells matches ..-1 run scoreboard players set mana spells 0
+execute if score mana spells matches 21.. run scoreboard players set mana spells 20
+
+execute unless score @s food_bar = mana spells run function artefact-api:mana/check_bar
+
+execute if score @s food_bar matches 0.. if score @s food_bar = mana spells run effect clear @s minecraft:hunger
+execute if score @s food_bar = mana spells run effect clear @s minecraft:saturation
+
+execute if score mana spells matches 20 if score mana_regen clock matches 0.. run scoreboard players set mana_regen clock 0
+execute unless score mana spells = @s food_bar run scoreboard players set mana_regen clock 0
+execute if score mana spells matches 0..19 if score mana spells = @s food_bar run scoreboard players add mana_regen clock 1
+execute if score mana_regen clock matches 40.. if score mana spells = @s food_bar run function artefact-core:player/regen_mana
+
+#energy
+xp set @a 0 points
+execute store result score level_bar energy run xp query @s levels
+execute unless score level_bar energy = level energy run function artefact-api:energy/check_level
+
+#left/right click
+execute if entity @s[nbt={ActiveEffects:[{Id:28b,Amplifier:-1b}]}] run effect clear @s[nbt={OnGround:1b}] minecraft:slow_falling
+execute if entity @s[nbt={ActiveEffects:[{Id:8b,Amplifier:-1b}]}] run effect clear @s[nbt={OnGround:1b}] minecraft:jump_boost
+execute if entity @s[scores={cooldown=58},nbt={OnGround:0b}] run effect give @s minecraft:slow_falling 999999 0 true
+
+execute if score cooldown spells matches 1.. run scoreboard players remove cooldown spells 1
+
+execute if score state spells matches 1.. if entity @s[gamemode=!spectator,nbt={SelectedItem:{tag:{artefact:{can_left_click:1b}}}}] run function artefact-core:player/holding_item/can_left_click
+execute if entity @s[gamemode=!spectator,nbt={SelectedItem:{tag:{artefact:{can_right_click:1b}}}}] run function artefact-core:player/holding_item/can_right_click
+
+scoreboard players set @s[scores={use_carrot_stick=1..},nbt=!{SelectedItem:{tag:{artefact:{can_right_click:1b}}}}] use_carrot_stick 0
+execute unless entity @s[nbt={SelectedItem:{tag:{artefact:{can_left_click:1b}}}}] run tp @e[type=minecraft:slime,tag=left_click] 0 0 0
+
+stopsound @s player minecraft:entity.player.attack.strong
+stopsound @s player minecraft:entity.player.attack.knockback
+stopsound @s player minecraft:entity.player.attack.weak
+
+scoreboard players set @s damage_dealt 0
+
+#spells
+execute if score state spells matches 1.. run scoreboard players add timeout spells 1
+execute if score timeout spells matches 40.. run function artefact-api:spells/reset_activation
+
+#camera flick
+#disabled - function artefact-api:flick/check
+
+#end hotbar slot menu
+function artefact-core:player/hotbar/remove/check
+
+#disable offhand
+function artefact-core:player/offhand/run_checks
+
+#max health score
+scoreboard players operation @s max_health = @s max_hearts
+scoreboard players operation @s max_health *= heart_to_health_multiplier max_health
+
+execute if score @s health_bar > @s max_health run effect give @s minecraft:instant_health
+
+#switching slot noise
+scoreboard players operation previous sel_hotbar_slot = @s sel_hotbar_slot
+execute store result score @s sel_hotbar_slot run data get entity @s SelectedItemSlot
+execute unless score previous sel_hotbar_slot = @s sel_hotbar_slot run playsound minecraft:entity.arrow.shoot player @s ~ ~ ~ .3 2 1
+
+#indicate to non-primary players who the primary player is
+particle minecraft:firework ~ ~2.25 ~ 0 0 0 0 1 force @a[tag=!primary]
+
+#actionbar
+execute if score actionbar_cooldown spells matches 1.. run scoreboard players remove actionbar_cooldown spells 1
+
+execute unless score actionbar_cooldown spells matches 1.. if score state spells matches 0 if score @s food_bar matches 0.. unless score cooldown spells matches 40.. run function artefact-api:actionbar

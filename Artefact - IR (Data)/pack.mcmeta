@@ -1,0 +1,24 @@
+{
+    "pack": {
+        "pack_format": 0,
+        "description": "§6Data for §cArtefact\n§7(1.14+)"
+    },
+    "credits": [
+        {
+            "name": "Andante",
+            "roles": [
+                "founder",
+                "developer"
+            ]
+        },
+        {
+            "name": "razorsharp",
+            "roles": [
+                "founder",
+                "developer",
+                "graphics",
+                "lore"
+            ]
+        }
+    ]
+}

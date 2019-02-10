@@ -1,0 +1,11 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "block/glass_pane"
+    },
+    "overrides": [
+                { "predicate": {"custom_model_data": 1}, "model": "artefact:npc/andante"},
+                { "predicate": {"custom_model_data": 2}, "model": "artefact:npc/razorsharp"},
+                { "predicate": {"custom_model_data": 3}, "model": "artefact:npc/toffeemax"}
+    ]
+}

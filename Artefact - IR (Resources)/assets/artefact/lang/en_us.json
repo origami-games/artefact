@@ -1,0 +1,49 @@
+{
+    "text.artefact.core.load": "§cArtefact: §6Loaded",
+
+    "text.artefact.gui.attribute_status": "Attribute Status:",
+
+    "advancements.artefact.root.title": "The Adventure Begins",
+    "advancements.artefact.root.description": "Finish the start cutscene",
+
+    "text.artefact.corrupt_scores": "There is something wrong with your scores! Resetting...",
+    "text.artefact.switched_primary_player": "[Admin] Success! You are now the primary player",
+    "text.artefact.random_primary_player": "[Multiplayer] Picking one person at random to be the primary player",
+
+    "text.artefact.mana.regenerating": "Mana regenerating...",
+
+    "text.artefact.actionbar.health": "❤",
+    "text.artefact.actionbar.mana": "✦",
+    "text.artefact.actionbar.spells.recharging": "Spells recharging...",
+
+    "text.artefact.spells.activated": "Spell Activated",
+    "text.artefact.spells.wait": "Please wait before using that spell again",
+    "text.artefact.spells.discharge": "Discharge",
+    "text.artefact.spells.sprint": "Sprint",
+
+    "text.artefact.actionbar.spells.click_status.r_x_x": "              §aR§7-§n?§r§7-?§r              ",
+    "text.artefact.actionbar.spells.click_status.r_r_x": "              §aR§7-§aR§7-§n?§r              ",
+    "text.artefact.actionbar.spells.click_status.r_l_x": "              §aR§7-§aL§7-§n?§r              ",
+    "text.artefact.actionbar.spells.click_status.r_l_l": "              §4R§c-§4L§c-§4L§r              ",
+    "text.artefact.actionbar.spells.click_status.r_r_r": "              §4R§c-§4R§c-§4R§r              ",
+    "text.artefact.actionbar.spells.click_status.r_l_r": "              §4R§c-§4L§c-§4R§r              ",
+    "text.artefact.actionbar.spells.click_status.r_r_l": "              §4R§c-§4R§c-§4L§r              ",
+
+    "item.artefact.magic_shield": "Magic Shield",
+    "item.artefact.dust.pixie": "Pixie Dust",
+    "item.artefact.dust.pixie.lore": "Extractions of a tiny fairy",
+
+    "text.artefact.level.undefined": "[Level §cUndefined§7]",
+    "text.artefact.level.1": "[Level 1]",
+
+    "entity.artefact.zombie": "Zombie",
+    "entity.artefact.pixie": "Pixie",
+
+    "gui.recipebook.moreRecipes": "",
+    "gui.recipebook.toggleRecipes.all": "",
+    "gui.recipebook.toggleRecipes.craftable": "",
+    "gui.recipebook.toggleRecipes.smeltable": "",
+    "gui.recipebook.toggleRecipes.blastable": "",
+    "gui.recipebook.toggleRecipes.smokable": "",
+    "container.crafting": ""
+}

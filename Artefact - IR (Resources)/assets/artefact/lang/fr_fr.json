@@ -1,0 +1,49 @@
+{
+    "text.artefact.core.load": "§cArtefact: §6Chargé",
+
+    "text.artefact.gui.attribute_status": "Statut d'attribut:",
+
+    "advancements.artefact.root.title": "L'aventure Commence",
+    "advancements.artefact.root.description": "Terminez la cinématique de départ",
+
+    "text.artefact.corrupt_scores": "Il y a quelque chose qui ne va pas avec vos scores! Réinitialisation...",
+    "text.artefact.switched_primary_player": "[Administrateur] Succès! Vous êtes maintenant le joueur principal",
+    "text.artefact.random_primary_player": "[Multijoueur] Choisir une personne au hasard pour devenir le joueur principal",
+
+    "text.artefact.mana.regenerating": "Mana régénérant...",
+
+    "text.artefact.actionbar.health": "❤",
+    "text.artefact.actionbar.mana": "✦",
+    "text.artefact.actionbar.spells.recharging": "Sorts qui se rechargent...",
+
+    "text.artefact.spells.activated": "Sort Activé",
+    "text.artefact.spells.wait": "S'il vous plaît attendez avant d'utiliser à nouveau ce sort",
+    "text.artefact.spells.discharge": "Décharge",
+    "text.artefact.spells.sprint": "Sprint",
+
+    "text.artefact.actionbar.spells.click_status.r_x_x": "              §aR§7-§n?§r§7-?§r              ",
+    "text.artefact.actionbar.spells.click_status.r_r_x": "              §aR§7-§aR§7-§n?§r              ",
+    "text.artefact.actionbar.spells.click_status.r_l_x": "              §aR§7-§aL§7-§n?§r              ",
+    "text.artefact.actionbar.spells.click_status.r_l_l": "              §4R§c-§4L§c-§4L§r              ",
+    "text.artefact.actionbar.spells.click_status.r_r_r": "              §4R§c-§4R§c-§4R§r              ",
+    "text.artefact.actionbar.spells.click_status.r_l_r": "              §4R§c-§4L§c-§4R§r              ",
+    "text.artefact.actionbar.spells.click_status.r_r_l": "              §4R§c-§4R§c-§4L§r              ",
+
+    "item.artefact.magic_shield": "Bouclier Magique",
+    "item.artefact.dust.pixie": "Poussière de Lutin",
+    "item.artefact.dust.pixie.lore": "Extractions d'une petite fée",
+
+    "text.artefact.level.undefined": "[Niveau §cIndéfini§7]",
+    "text.artefact.level.1": "[Niveau 1]",
+
+    "entity.artefact.zombie": "Zombi",
+    "entity.artefact.pixie": "Lutin",
+
+    "gui.recipebook.moreRecipes": "",
+    "gui.recipebook.toggleRecipes.all": "",
+    "gui.recipebook.toggleRecipes.craftable": "",
+    "gui.recipebook.toggleRecipes.smeltable": "",
+    "gui.recipebook.toggleRecipes.blastable": "",
+    "gui.recipebook.toggleRecipes.smokable": "",
+    "container.crafting": ""
+}

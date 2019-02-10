@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:compass"
+    },
+    "title": {
+      "translate": "advancements.artefact.root.title"
+    },
+    "description": {
+      "translate": "advancements.artefact.root.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/options_background.png"
+  },
+  "criteria": {
+    "start_game": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
