@@ -3,8 +3,9 @@
 #called by artefact-core:tick
 
 #check spawned spawned mob
-execute if entity @s[tag=spawn_mob.zombie.level.1] run function artefact-api:entities/spawn/zombie/level_1
+execute if entity @s[tag=spawn_mob.zombie.simple] run function artefact-api:entities/spawn/zombie/simple
 execute if entity @s[tag=spawn_mob.pixie] run function artefact-api:entities/spawn/pixie
+execute if entity @s[tag=spawn_mob.rat] run function artefact-api:entities/spawn/rat
 
 #kill entity
 tag @s[type=!minecraft:player] add remove

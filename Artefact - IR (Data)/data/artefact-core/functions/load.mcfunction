@@ -10,6 +10,9 @@ scoreboard objectives add offhand_counts dummy "Offhand Counts"
 scoreboard objectives add hotbar_counts dummy "Hotbar Counts"
 scoreboard objectives add gamerule dummy "Gamerules"
 
+scoreboard objectives add health dummy "Health"
+scoreboard objectives add health.prev dummy "Health in Previous Tick"
+
 scoreboard objectives add food_until_mana dummy "Food Bar until Mana Score"
 scoreboard objectives add health_bar dummy "Health Bar Value"
 scoreboard objectives add flick_math dummy "Flick Maths"
@@ -58,6 +61,7 @@ gamerule doMobSpawning false
 gamerule announceAdvancements false
 gamerule commandBlockOutput false
 gamerule sendCommandFeedback false
+gamerule showDeathMessages false
 gamerule keepInventory true
 gamerule mobGriefing false
 

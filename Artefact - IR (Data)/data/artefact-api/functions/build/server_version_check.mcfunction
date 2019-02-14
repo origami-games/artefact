@@ -8,8 +8,8 @@ summon minecraft:armor_stand ~ ~ ~ {HandItems:[{id:"minecraft:trident",Count:1b,
 execute if entity @e[type=minecraft:armor_stand,tag=version_test,nbt={HandItems:[{tag:{update:13}}]}] run scoreboard players set server_version general 13
 execute if entity @e[type=minecraft:armor_stand,tag=version_test,nbt={HandItems:[{tag:{update:14}}]}] run scoreboard players set server_version general 14
 #disable pack is score is too low
-execute unless score server_version general matches 14.. run tellraw @a {"translate":"text.artefact.core.server_version.too_low","color":"red"}
-execute unless score server_version general matches 14.. run datapack disable "file/Artefact - IR (Data)"
-execute unless score server_version general matches 14.. run tellraw @a {"translate":"text.artefact.core.server_version.too_low.done","color":"green"}
+execute unless score server_version general matches 14 run tellraw @a {"translate":"text.artefact.core.server_version.too_low","color":"red"}
+execute unless score server_version general matches 14 run datapack disable "file/Artefact - IR (Data)"
+execute unless score server_version general matches 14 run tellraw @a {"translate":"text.artefact.core.server_version.too_low.done","color":"green"}
 #kill test entities
 kill @e[type=minecraft:armor_stand,tag=version_test]

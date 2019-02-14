@@ -6,6 +6,9 @@
 gamemode adventure @s[gamemode=survival]
 scoreboard players set loaded general 2
 
+#tutorial
+execute unless entity @s[tag=tutorial.spells] if data entity @s SelectedItem.tag.artefact.spells run function artefact-api:tutorial/spells
+
 #clear items
 clear @s #artefact-type:no_pickup{artefact:{no_pickup:1b}}
 execute if entity @s[nbt={Inventory:[{tag:{artefact:{item_type:["dust","no_execution"]}}}]}] run function artefact-api:items/dust/pickup/check

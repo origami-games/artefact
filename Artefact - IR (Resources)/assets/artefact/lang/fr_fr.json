@@ -1,5 +1,19 @@
 {
     "text.artefact.core.load": "§cArtefact: §6Chargé",
+    "text.artefact.core.update": "Mise à jour réussie",
+    "text.artefact.core.downdate": "Vous êtes en retard! Désactiver le pack...",
+    "text.artefact.core.downdate.done": "Pack désactivé",
+    "text.artefact.core.update.build_number": "Numéro de version",
+    "text.artefact.core.update.server_version_number": "Version du serveur",
+    "text.artefact.core.server_version.too_low": "Vous ne jouez pas dans la version correcte de Minecraft! Désactiver le pack...",
+    "text.artefact.core.server_version.too_low.done": "Pack désactivé",
+
+    "tutorial.artefact.prefix": "Conseil",
+    "tutorial.artefact.spells.main": "Vous activez des sorts dans des combinaisons de clics",
+    "tutorial.artefact.spells.right": "Soumettre R",
+    "tutorial.artefact.spells.left": "Soumettre L",
+
+    "death.artefact.player": "est mort(e)",
 
     "text.artefact.gui.attribute_status": "Statut d'attribut:",
 
@@ -33,11 +47,14 @@
     "item.artefact.dust.pixie": "Poussière de Lutin",
     "item.artefact.dust.pixie.lore": "Extractions d'une petite fée",
 
-    "text.artefact.level.undefined": "[Niveau §cIndéfini§7]",
-    "text.artefact.level.1": "[Niveau 1]",
+    "text.artefact.level.undefined": "[§cNombre D'étoiles Non Défini§7]",
+    "text.artefact.level.1": "[✦  ]",
+    "text.artefact.level.2": "[✦✦ ]",
+    "text.artefact.level.3": "[✦✦✦]",
 
     "entity.artefact.zombie": "Zombi",
     "entity.artefact.pixie": "Lutin",
+    "entity.artefact.rat": "Rat",
 
     "gui.recipebook.moreRecipes": "",
     "gui.recipebook.toggleRecipes.all": "",

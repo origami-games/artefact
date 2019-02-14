@@ -1,6 +1,22 @@
 CHANGELOG
 =========
 
+# Source v0.0.0.2-pre (build 2)
+## Bug Fixes
+- [[#1]](https://github.com/ArtefactDev/Imperius-Return/issues/1) Glass panes show missing texture icon
+- [[#4]](https://github.com/ArtefactDev/Imperius-Return/issues/4) Mana gets set to `0` on death even in creative mode
+## Changes
+### Gameplay
+- Added a tutorial-like feature
+  - When doing something for the first time, such as holding an item with a spell, you will get a tip in the chat
+- Changed global death message
+### Technical
+- Added `Command Book` (`/function artefact-api:items/give/command_book`)
+### Entities
+- Added rats
+- Dropped items display their names
+- Changed the above-head levels system to a 1-3 stars rating
+
 # Source v0.0.0.1-pre (build 1)
 To test the source code, install the resource pack, load up a creative void world and install the data pack into it. Run `/reload` and get going!
 Here's a run-down of everything added so far:
@@ -38,7 +54,7 @@ Spells can be added to right-clickable items using the tag `artefact:{can_right_
 - Discharge [R-L-R / `discharge`]
   - Boosts you up into the sky
   - Slow fall back down
-## Mobs
+## Entities
 - Zombies (Level: 1) `/function artefact-api:entities/spawn/zombie/level_1`
   - Behaves like normal zombies
   - Have leather caps and boots

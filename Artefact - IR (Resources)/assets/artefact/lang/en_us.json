@@ -1,5 +1,19 @@
 {
     "text.artefact.core.load": "§cArtefact: §6Loaded",
+    "text.artefact.core.update": "Successfully updated",
+    "text.artefact.core.downdate": "You are downdating! Disabling pack...",
+    "text.artefact.core.downdate.done": "Pack disabled",
+    "text.artefact.core.update.build_number": "Build Number",
+    "text.artefact.core.update.server_version_number": "Server version",
+    "text.artefact.core.server_version.too_low": "You are not playing in the correct Minecraft version! Disabling pack...",
+    "text.artefact.core.server_version.too_low.done": "Pack disabled",
+
+    "tutorial.artefact.prefix": "Tip",
+    "tutorial.artefact.spells.main": "You activate spells in click combinations",
+    "tutorial.artefact.spells.right": "Submit R",
+    "tutorial.artefact.spells.left": "Submit L",
+
+    "death.artefact.player": "died",
 
     "text.artefact.gui.attribute_status": "Attribute Status:",
 
@@ -33,11 +47,14 @@
     "item.artefact.dust.pixie": "Pixie Dust",
     "item.artefact.dust.pixie.lore": "Extractions of a tiny fairy",
 
-    "text.artefact.level.undefined": "[Level §cUndefined§7]",
-    "text.artefact.level.1": "[Level 1]",
+    "text.artefact.level.undefined": "[§cStar Rating Undefined§7]",
+    "text.artefact.level.1": "[✦  ]",
+    "text.artefact.level.2": "[✦✦ ]",
+    "text.artefact.level.3": "[✦✦✦]",
 
     "entity.artefact.zombie": "Zombie",
     "entity.artefact.pixie": "Pixie",
+    "entity.artefact.rat": "Rat",
 
     "gui.recipebook.moreRecipes": "",
     "gui.recipebook.toggleRecipes.all": "",
