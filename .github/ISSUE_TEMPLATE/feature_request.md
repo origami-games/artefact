@@ -1,11 +1,25 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: "[<VERSION>/<CATEGORY>] <TITLE>"
+title: "[<CATEGORY>/<SUB_CATEGORY>] <TITLE>"
 labels: feature
 assignees: ''
 
 ---
+
+> Categories
+>  Resources
+>  Code
+>  Map
+>  GitHub
+
+> Sub-Categories:
+>  Gameplay
+>  Entities
+>  Admin
+>  Textures
+>  Inventory
+>  Miscellaneous
 
 **Is your feature request related to a problem? Please describe. Delete this if unnecessary.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]

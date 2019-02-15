@@ -7,4 +7,10 @@ assignees: ''
 
 ---
 
-
+> Categories:
+>  Gameplay
+>  Entities
+>  Admin
+>  Textures
+>  Inventory
+>  Miscellaneous
