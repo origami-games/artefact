@@ -29,6 +29,7 @@
     "text.artefact.actionbar.health": "❤",
     "text.artefact.actionbar.mana": "✦",
     "text.artefact.actionbar.spells.recharging": "Sorts qui se rechargent...",
+    "text.artefact.actionbar.shield.recharging": "Bouclier qui se rechargent...",
 
     "text.artefact.spells.activated": "Sort Activé",
     "text.artefact.spells.wait": "S'il vous plaît attendez avant d'utiliser à nouveau ce sort",
@@ -47,6 +48,15 @@
     "item.artefact.dust.pixie": "Poussière de Lutin",
     "item.artefact.dust.pixie.lore": "Extractions d'une petite fée",
 
+    "item.artefact.treasure_bag": "Sac au Trésor",
+    "item.artefact.treasure_bag.no_loot": "Erreur: le sac de trésor n'a pas de balise `treasure_bag_type`",
+    "item.artefact.treasure_bag.basic": "Base",
+    "item.artefact.treasure_bag.basic.use": "Sac à trésor de base consommé",
+    "item.artefact.treasure_bag.epic": "Épique",
+    "item.artefact.treasure_bag.epic.use": "Épique treasure bag consommé",
+    "item.artefact.treasure_bag.legendary": "Légendaire",
+    "item.artefact.treasure_bag.legendary.use": "Légendaire treasure bag consommé",
+
     "text.artefact.level.undefined": "[§cNombre D'étoiles Non Défini§7]",
     "text.artefact.level.1": "[✦  ]",
     "text.artefact.level.2": "[✦✦ ]",
@@ -55,6 +65,7 @@
     "entity.artefact.zombie": "Zombi",
     "entity.artefact.pixie": "Lutin",
     "entity.artefact.rat": "Rat",
+    "entity.artefact.butterfly": "Papillon",
 
     "gui.recipebook.moreRecipes": "",
     "gui.recipebook.toggleRecipes.all": "",

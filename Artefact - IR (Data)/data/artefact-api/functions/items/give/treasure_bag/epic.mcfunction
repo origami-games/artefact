@@ -1,0 +1,1 @@
+give @s minecraft:carrot_on_a_stick{artefact:{treasure_bag:{type:"epic"}},CustomModelData:2,display:{Name:"[{\"translate\":\"item.artefact.treasure_bag.epic\",\"italic\":\"false\",\"color\":\"aqua\"},\" \",{\"translate\":\"item.artefact.treasure_bag\",\"italic\":\"false\",\"color\":\"aqua\"}]"}}

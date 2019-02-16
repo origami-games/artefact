@@ -7,11 +7,13 @@ execute store result score primary_players general if entity @e[tag=primary]
 execute if score primary_players general matches 2.. run function artefact-core:random_primary
 execute unless entity @p[tag=primary] run function artefact-core:random_primary
 
+scoreboard players reset @a[tag=!primary]
+
 #tags
 tag @e[type=#artefact-type:check_moving,nbt={Motion:[0.0d,0.0d,0.0d]}] remove moving
 tag @e[type=#artefact-type:check_moving,nbt=!{Motion:[0.0d,0.0d,0.0d]}] add moving
 
-execute as @e[tag=mob_top] at @s unless entity @e[tag=mob_bottom,distance=...5] run tag @s add remove
+execute as @e[tag=mob_top] at @s unless entity @e[tag=mob_bottom,distance=...5] positioned ~ ~-.775 ~ unless entity @e[tag=mob_bottom,distance=...5] run tag @s add remove
 execute as @e[tag=mob_vessel,tag=spawned] at @s positioned ~ ~.775 ~ unless entity @e[tag=mob_bottom,sort=nearest,limit=1,distance=...1] run tag @s add remove
 tag @e[tag=mob_bottom,nbt=!{Passengers:[{}]}] add remove
 
@@ -27,12 +29,12 @@ execute as @e[tag=npc.invulnerable] run data merge entity @s {Health:20.0f}
 execute as @e[tag=npc.look] at @s run function artefact-api:npcs/look
 
 #mobs
-    #spawning (SPREAD AND SPAWN CHECK CANNOT BE RAN IN THE SAME SUBTICK)
+## spawning (SPREAD AND SPAWN CHECK CANNOT BE RAN IN THE SAME SUBTICK)
 execute as @e[type=minecraft:armor_stand,tag=spawn_mob] at @s run function artefact-api:entities/spread
 execute as @e[type=minecraft:armor_stand,tag=spawn_mob] at @s run function artefact-api:entities/check_spawn
-    #mob sounds
-execute as @e[tag=sounds] at @s run function artefact-api:entities/sounds/check/run
-    #spawned score
+## sounds
+execute as @e[tag=sounds] at @s run function artefact-api:entities/effects/check/run
+## spawned score
 tag @e[tag=mob] add spawned
 
 #items

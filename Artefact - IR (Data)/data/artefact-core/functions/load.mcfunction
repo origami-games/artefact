@@ -21,10 +21,13 @@ scoreboard objectives add food_bar food "Food Bar Value"
 scoreboard objectives add death_check deathCount "Death Check"
 scoreboard objectives add use_carrot_stick minecraft.used:minecraft.carrot_on_a_stick "Carrot on a Stick Use Check"
 scoreboard objectives add damage_dealt minecraft.custom:minecraft.damage_dealt "Damage Dealt"
+scoreboard objectives add sneak_check minecraft.custom:minecraft.sneak_time "Sneak Check"
 
 scoreboard objectives add energy dummy "Energy"
 
-scoreboard objectives add spells dummy "Spell Activation State"
+scoreboard objectives add spells dummy "Spell Activation States"
+
+scoreboard objectives add shield dummy "Shield Activation States"
 
 scoreboard objectives add clock dummy "Clock"
 scoreboard objectives add sel_hotbar_slot dummy "Selected Hotbar Slot"
@@ -46,6 +49,14 @@ execute unless score state spells matches 0.. run scoreboard players set state s
 execute unless score cooldown spells matches 0.. run scoreboard players set cooldown spells 0
 
 execute unless score custom_mob_spawning gamerule matches 0..1 run scoreboard players set custom_mob_spawning gamerule 1
+
+#initialise bossbars
+bossbar add artefact-api:shield/timer ""
+bossbar set artefact-api:shield/timer name {"translate":"bossbar.artefact.shield.timer","color":"light_purple"}
+bossbar set artefact-api:shield/timer style notched_12
+bossbar set artefact-api:shield/timer color purple
+bossbar set artefact-api:shield/timer visible true
+bossbar set artefact-api:shield/timer max 3
 
 #initialise teams
 team add no_collision

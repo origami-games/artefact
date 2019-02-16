@@ -1,6 +1,32 @@
 CHANGELOG
 =========
 
+# Source v0.0.0.3-pre (build 3)
+## Bug Fixes
+- [[#6]](https://github.com/ArtefactDev/Imperius-Return/issues/6) Build check still runs feedback tellraw if a player hasn't ran the command
+## Bug Fixes
+- [[#7]](https://github.com/ArtefactDev/Imperius-Return/issues/7) Discharge spell's slow falling effect is inconsistent
+## Changes
+### Gameplay
+- Added magic shields' functionality `minecraft:shield{artefact:{item_type:["magic_shield"]}}`
+  - While in offhand, look down, sneak and wait to activate
+  - 5 second cooldown
+- Made lapis lazuli ore block animated [[#5]](https://github.com/ArtefactDev/Imperius-Return/issues/5)
+### Entities
+- Added butterflies
+  - **Needs model, animation and texture**
+  - Passive mob
+- Added ambient and damage particles for pixies
+### Items
+- Added treasure bags `/function artefact-api:items/give/treasure_bag/<basic|epic|legendary>`
+  - Basic, epic, legendary and set
+  - Placeholder bag texture currently (credit: Terraria purification powder)
+### Technical
+- Changed command book to a chat menu `/function artefact-api:command_menu/open`
+- Imported vanilla data pack tags
+- Made server version check armour stand invisible
+- Different spells can now have different mana amounts taken away
+
 # Source v0.0.0.2-pre (build 2)
 ## Bug Fixes
 - [[#1]](https://github.com/ArtefactDev/Imperius-Return/issues/1) Glass panes show missing texture icon

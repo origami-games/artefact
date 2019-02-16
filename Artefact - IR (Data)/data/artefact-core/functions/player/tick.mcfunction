@@ -42,16 +42,11 @@ execute store result score level_bar energy run xp query @s levels
 execute unless score level_bar energy = level energy run function artefact-api:energy/check_level
 
 #left/right click
-execute if entity @s[nbt={ActiveEffects:[{Id:28b,Amplifier:-1b}]}] run effect clear @s[nbt={OnGround:1b}] minecraft:slow_falling
-execute if entity @s[nbt={ActiveEffects:[{Id:8b,Amplifier:-1b}]}] run effect clear @s[nbt={OnGround:1b}] minecraft:jump_boost
-execute if entity @s[scores={cooldown=58},nbt={OnGround:0b}] run effect give @s minecraft:slow_falling 999999 0 true
-
 execute if score cooldown spells matches 1.. run scoreboard players remove cooldown spells 1
 
 execute if score state spells matches 1.. if entity @s[gamemode=!spectator,nbt={SelectedItem:{tag:{artefact:{can_left_click:1b}}}}] run function artefact-core:player/holding_item/can_left_click
 execute if entity @s[gamemode=!spectator,nbt={SelectedItem:{tag:{artefact:{can_right_click:1b}}}}] run function artefact-core:player/holding_item/can_right_click
 
-scoreboard players set @s[scores={use_carrot_stick=1..},nbt=!{SelectedItem:{tag:{artefact:{can_right_click:1b}}}}] use_carrot_stick 0
 execute unless entity @s[nbt={SelectedItem:{tag:{artefact:{can_left_click:1b}}}}] run tp @e[type=minecraft:slime,tag=left_click] 0 0 0
 
 stopsound @s player minecraft:entity.player.attack.strong
@@ -60,9 +55,21 @@ stopsound @s player minecraft:entity.player.attack.weak
 
 scoreboard players set @s damage_dealt 0
 
+#right-click detection
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick"}}] run function artefact-core:player/holding_item/carrot_on_a_stick
+
 #spells
 execute if score state spells matches 1.. run scoreboard players add timeout spells 1
 execute if score timeout spells matches 40.. run function artefact-api:spells/reset_activation
+
+#shields
+execute unless entity @s[scores={sneak_check=1..}] run function artefact-api:shield/reset_timer
+execute unless score cooldown shield matches 0 run scoreboard players remove cooldown shield 1
+execute if score cooldown shield matches 1.. run scoreboard players set @s sneak_check 0
+execute if entity @s[scores={sneak_check=1..},nbt=!{Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] unless score cooldown shield matches 1.. run scoreboard players set @s sneak_check 0
+execute if entity @s[scores={sneak_check=1..},nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] unless score cooldown shield matches 1.. run function artefact-api:shield/check_sneak
+
+execute if score cooldown shield matches 1.. run function artefact-api:shield/continuous_visuals
 
 #camera flick
 #disabled - function artefact-api:flick/check

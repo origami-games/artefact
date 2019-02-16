@@ -21,7 +21,7 @@ execute if score click_1 spells matches 2 if score cooldown spells matches 0 run
 execute if score state spells matches 3.. run scoreboard players set actionbar_cooldown spells 30
 
 #actions
-execute if score @s food_bar matches 4.. if score state spells matches 3.. at @p[tag=primary] run function artefact-api:spells/activate_action
+execute if score state spells matches 3.. at @p[tag=primary] run function artefact-api:spells/activate_action
 
 #reset
 execute if score @s food_bar matches ..3 if score state spells matches 3.. run function artefact-api:spells/reset_activation

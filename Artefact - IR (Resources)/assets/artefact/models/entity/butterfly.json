@@ -1,0 +1,11 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "artefact:entity/butterfly"
+	},
+	"display": {
+		"head": {
+			"translation": [0, -33, 0]
+		}
+	}
+}

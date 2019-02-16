@@ -3,7 +3,7 @@
 #called by artefact-core:build/check
 
 #summon test entity
-summon minecraft:armor_stand ~ ~ ~ {HandItems:[{id:"minecraft:trident",Count:1b,tag:{update:13}},{id:"minecraft:lectern",Count:1b,tag:{update:14}}],ArmorItems:[{id:"minecraft:stick",Count:1b,tag:{update:15}},{id:"minecraft:stick",Count:1b,tag:{update:16}},{id:"minecraft:stick",Count:1b,tag:{update:17}},{id:"minecraft:stick",Count:1b,tag:{update:18}}],Tags:["version_test"]}
+summon minecraft:armor_stand ~ ~ ~ {HandItems:[{id:"minecraft:trident",Count:1b,tag:{update:13}},{id:"minecraft:lectern",Count:1b,tag:{update:14}}],ArmorItems:[{id:"minecraft:stick",Count:1b,tag:{update:15}},{id:"minecraft:stick",Count:1b,tag:{update:16}},{id:"minecraft:stick",Count:1b,tag:{update:17}},{id:"minecraft:stick",Count:1b,tag:{update:18}}],Tags:["version_test"],Invisible:1b,Marker:1b,Small:1b,NoBasePlate:1b,Invulnerable:1b}
 #test hand items
 execute if entity @e[type=minecraft:armor_stand,tag=version_test,nbt={HandItems:[{tag:{update:13}}]}] run scoreboard players set server_version general 13
 execute if entity @e[type=minecraft:armor_stand,tag=version_test,nbt={HandItems:[{tag:{update:14}}]}] run scoreboard players set server_version general 14

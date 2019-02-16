@@ -21,7 +21,7 @@ execute if score state spells matches 3.. run scoreboard players set actionbar_c
 execute if score @s food_bar matches 4.. if score state spells matches 3.. at @p[tag=primary] run function artefact-api:spells/activate_action
 
 #reset
-execute if score @s food_bar matches ..3 if score state spells matches 3.. run function artefact-api:spells/reset_activation
+execute if score state spells matches 3.. run function artefact-api:spells/reset_activation
 
 #reset score
 scoreboard players set @s use_carrot_stick 0

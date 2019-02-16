@@ -29,6 +29,7 @@
     "text.artefact.actionbar.health": "❤",
     "text.artefact.actionbar.mana": "✦",
     "text.artefact.actionbar.spells.recharging": "Spells recharging...",
+    "text.artefact.actionbar.shield.recharging": "Shield recharging...",
 
     "text.artefact.spells.activated": "Spell Activated",
     "text.artefact.spells.wait": "Please wait before using that spell again",
@@ -47,7 +48,15 @@
     "item.artefact.dust.pixie": "Pixie Dust",
     "item.artefact.dust.pixie.lore": "Extractions of a tiny fairy",
 
-    "text.artefact.level.undefined": "[§cStar Rating Undefined§7]",
+    "item.artefact.treasure_bag.no_loot": "Error: Treasure bag has no `treasure_bag_type` tag",
+    "item.artefact.treasure_bag.basic": "Basic",
+    "item.artefact.treasure_bag.basic.use": "Consumed basic treasure bag",
+    "item.artefact.treasure_bag.epic": "Epic",
+    "item.artefact.treasure_bag.epic.use": "Consumed epic treasure bag",
+    "item.artefact.treasure_bag.legendary": "Legendary",
+    "item.artefact.treasure_bag.legendary.use": "Consumed legendary treasure bag",
+
+    "text.artefact.level.undefined": "§7[§cStar Rating Undefined§7]",
     "text.artefact.level.1": "[✦  ]",
     "text.artefact.level.2": "[✦✦ ]",
     "text.artefact.level.3": "[✦✦✦]",
@@ -55,6 +64,7 @@
     "entity.artefact.zombie": "Zombie",
     "entity.artefact.pixie": "Pixie",
     "entity.artefact.rat": "Rat",
+    "entity.artefact.butterfly": "Butterfly",
 
     "gui.recipebook.moreRecipes": "",
     "gui.recipebook.toggleRecipes.all": "",
