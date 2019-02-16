@@ -4,7 +4,6 @@ CHANGELOG
 # Source v0.0.0.3-pre (build 3)
 ## Bug Fixes
 - [[#6]](https://github.com/ArtefactDev/Imperius-Return/issues/6) Build check still runs feedback tellraw if a player hasn't ran the command
-## Bug Fixes
 - [[#7]](https://github.com/ArtefactDev/Imperius-Return/issues/7) Discharge spell's slow falling effect is inconsistent
 ## Changes
 ### Gameplay
