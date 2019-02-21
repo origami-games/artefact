@@ -61,9 +61,13 @@ execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick"}}] run 
 #spells
 execute if score state spells matches 1.. run scoreboard players add timeout spells 1
 execute if score timeout spells matches 40.. run function artefact-api:spells/reset_activation
+execute if data entity @s SelectedItem.tag.artefact.spells run tag @s add holding_spell
+execute unless data entity @s SelectedItem.tag.artefact.spells if entity @s[tag=holding_spell] run function artefact-api:spells/reset_activation
 
 #shields
+
 execute unless entity @s[scores={sneak_check=1..}] run function artefact-api:shield/reset_timer
+execute unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] run function artefact-api:shield/reset_timer
 execute unless score cooldown shield matches 0 run scoreboard players remove cooldown shield 1
 execute if score cooldown shield matches 1.. run scoreboard players set @s sneak_check 0
 execute if entity @s[scores={sneak_check=1..},nbt=!{Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] unless score cooldown shield matches 1.. run scoreboard players set @s sneak_check 0

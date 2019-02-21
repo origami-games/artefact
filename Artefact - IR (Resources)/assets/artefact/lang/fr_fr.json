@@ -26,6 +26,12 @@
 
     "text.artefact.mana.regenerating": "Mana régénérant...",
 
+    "bossbar.artefact.shield.timer": "Invocation des forces..",
+
+    "text.artefact.offhand.shield_type": "Bouclier",
+    "text.artefact.offhand.shield_type.normal": "Ordinaire",
+    "text.artefact.offhand.shield_type.magic": "Magique",
+
     "text.artefact.actionbar.health": "❤",
     "text.artefact.actionbar.mana": "✦",
     "text.artefact.actionbar.spells.recharging": "Sorts qui se rechargent...",

@@ -4,7 +4,7 @@
 
 #remove bag
 replaceitem entity @s weapon.mainhand minecraft:air
-loot
+
 #give loot
 loot give @s loot artefact-api:treasure_bag/basic
 #text

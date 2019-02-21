@@ -6,9 +6,9 @@
 replaceitem entity @s weapon.mainhand minecraft:air
 
 #give loot
-loot give @s loot artefact-api:treasure_bag/epic
+give @s minecraft:diamond_sword
 #text
-tellraw @s {"translate":"item.artefact.treasure_bag.epic.use","color":"aqua"}
+tellraw @s {"translate":"item.artefact.treasure_bag.set.use","color":"gold"}
 
 #post
 tag @s add treasure_bag_used

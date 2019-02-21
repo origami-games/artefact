@@ -9,3 +9,5 @@ scoreboard players reset click_2 spells
 scoreboard players reset click_3 spells
 
 scoreboard players set timeout spells 0
+
+execute unless data entity @s SelectedItem.tag.artefact.spells run tag @s remove holding_spell

@@ -42,11 +42,15 @@ scoreboard players set threshold flick_math 50
 
 execute unless score level energy matches 1.. run scoreboard players set level energy 1
 
+scoreboard players set y_rot.min shield 70
+
 scoreboard players set max_mana spells 20
 scoreboard players set heart_to_health_multiplier max_health 2
 
 execute unless score state spells matches 0.. run scoreboard players set state spells 0
 execute unless score cooldown spells matches 0.. run scoreboard players set cooldown spells 0
+
+execute unless score cooldown shield matches 0.. run scoreboard players set cooldown shield 0
 
 execute unless score custom_mob_spawning gamerule matches 0..1 run scoreboard players set custom_mob_spawning gamerule 1
 
@@ -81,5 +85,7 @@ setworldspawn 0 0 0
 
 function artefact-api:click_detection/create_click
 function artefact-api:build/check
+
+datapack disable vanilla
 
 scoreboard players set loaded general 1

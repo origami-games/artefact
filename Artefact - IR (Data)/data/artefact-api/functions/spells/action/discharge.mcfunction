@@ -10,7 +10,6 @@ particle minecraft:flame ~ ~ ~ 0 1 0 .5 1000 force
 particle minecraft:enchanted_hit ~ ~ ~ 0 1 0 1 1000 force
 #functionality
 effect give @s minecraft:slow_falling 4 255 true
-effect give @s minecraft:jump_boost 4 255 true
 
 effect give @s minecraft:resistance 1 255 true
 effect give @e[tag=left_click] minecraft:resistance 1 255 true

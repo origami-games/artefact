@@ -26,6 +26,12 @@
 
     "text.artefact.mana.regenerating": "Mana regenerating...",
 
+    "bossbar.artefact.shield.timer": "Summoning forces...",
+
+    "text.artefact.offhand.shield_type": "Shield",
+    "text.artefact.offhand.shield_type.normal": "Normal",
+    "text.artefact.offhand.shield_type.magic": "Magic",
+
     "text.artefact.actionbar.health": "❤",
     "text.artefact.actionbar.mana": "✦",
     "text.artefact.actionbar.spells.recharging": "Spells recharging...",
