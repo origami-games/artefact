@@ -26,6 +26,7 @@ scoreboard objectives add sneak_check minecraft.custom:minecraft.sneak_time "Sne
 scoreboard objectives add energy dummy "Energy"
 
 scoreboard objectives add spells dummy "Spell Activation States"
+scoreboard objectives add spell_id dummy "Dynamic Spell IDs"
 
 scoreboard objectives add shield dummy "Shield Activation States"
 
@@ -35,23 +36,22 @@ scoreboard objectives add sel_hotbar_slot dummy "Selected Hotbar Slot"
 scoreboard objectives add max_hearts dummy "Max Hearts"
 scoreboard objectives add max_health dummy "Max Health"
 
-execute unless score mana spells matches 0.. run scoreboard players set mana spells 20
+scoreboard players set discharge spell_id 0
+scoreboard players set sprint spell_id 1
+scoreboard players set tornado spell_id 2
 
-scoreboard players set negative_constant flick_math -1
 scoreboard players set threshold flick_math 50
-
-execute unless score level energy matches 1.. run scoreboard players set level energy 1
-
 scoreboard players set y_rot.min shield 70
-
 scoreboard players set max_mana spells 20
 scoreboard players set heart_to_health_multiplier max_health 2
-
+scoreboard players set mana_regen.threshold clock 20
+scoreboard players set mana_required shield 2
+scoreboard players set negative_constant flick_math -1
+execute unless score mana spells matches 0.. run scoreboard players set mana spells 20
+execute unless score level energy matches 1.. run scoreboard players set level energy 1
 execute unless score state spells matches 0.. run scoreboard players set state spells 0
 execute unless score cooldown spells matches 0.. run scoreboard players set cooldown spells 0
-
 execute unless score cooldown shield matches 0.. run scoreboard players set cooldown shield 0
-
 execute unless score custom_mob_spawning gamerule matches 0..1 run scoreboard players set custom_mob_spawning gamerule 1
 
 #initialise bossbars

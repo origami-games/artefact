@@ -1,6 +1,32 @@
 CHANGELOG
 =========
 
+# [Source v0.0.0.5-pre (build 5)](https://github.com/ArtefactDev/Imperius-Return/archive/srv-v0.0.0.5-pre.zip)
+## Bug Fixes
+- [[#9]](https://github.com/ArtefactDev/Imperius-Return/issues/9) Function `artefact-api:entities/spawn/radius/butterfly` does not exist
+## Changes
+### Spells
+- Added Tornado spell [`R`-`L`-`L` / `tornado`]
+- Magic shield now takes away -2 mana
+- Removed `enchanted_hit` particle from spell `discharge`
+- Mana now takes 1 second to regenerate instead of 2
+### Gameplay
+- The treasure bag use message now says `Opened [...] treasure bag` instead of `Consumed [...] treasure bag`
+- Modified pixie hurt sound
+### Technical
+- Separated `discharge/sprint` spell test into their respective items
+- Changed all text JSON strings to the new single quotation format
+- Moved spaces next to the `L`/`R` display in the action bar from the language files to the raw function
+- Added headings to the items section of the command menu
+- Moved function `artefact-core:player/death` to `artefact-api:death`
+- Moved the indicator to non-primary players who the primary player is from `artefact:core/player/tick` to function `artefact-core:tick`
+- Added entity tag `artefact-type:sprite`
+- Reorganised on-load score sets
+- The slime for left-click now teleports to the player slightly quicker
+- Reworked the mana regen timer threshold
+- Removed unused 'flick' check
+- Removed unused loot table `minecraft:blocks/shulker_box`
+
 # [Source v0.0.0.4-pre (build 4)](https://github.com/ArtefactDev/Imperius-Return/archive/src-v0.0.0.4-pre.zip)
 ## Bug Fixes
 - [[#8]](https://github.com/ArtefactDev/Imperius-Return/issues/8) Removing magic shield from offhand while still activating does not reset timer
@@ -25,6 +51,7 @@ CHANGELOG
 - Added magic shields' functionality `/function artefact-api:items/give/shield/magic`
   - While in offhand, look down, sneak and wait to activate
   - 5 second cooldown
+  - 3 second charge-up
 - Made lapis lazuli ore block animated [[#5]](https://github.com/ArtefactDev/Imperius-Return/issues/5)
 ### Entities
 - Added butterflies
@@ -89,9 +116,9 @@ Some vanilla mechanics have been altered for a full RPG experience!
     - *e.g. standing in a block with the tag `#artefact-type:slowing` will slow you down, such as `minecraft:tall_grass`*
 ## Spells
 Spells can be added to right-clickable items using the tag `artefact:{can_right_click:1b,can_left_click:1b,spells:["<SPELL_ID>"]}`
-- Sprint [R-R-R / `sprint`]
+- Sprint [`R`-`R`-`R` / `sprint`]
   - Gives you speed 4 for 5 seconds
-- Discharge [R-L-R / `discharge`]
+- Discharge [`R`-`L`-`R` / `discharge`]
   - Boosts you up into the sky
   - Slow fall back down
 ## Entities

@@ -11,11 +11,11 @@ execute if score total_attributed offhand_counts matches 1 if entity @s[nbt=!{In
 execute if score total_attributed offhand_counts matches 2.. run function artefact-core:player/offhand/clear_shield_attributes
 
 #store *normal* shield with attributes count
-execute if score normal_shield offhand_counts matches 1.. run give @s minecraft:shield{artefact:{offhand_placeholder:1b,item_type:["shield"]},CustomModelData:1,Unbreakable:1b,display:{Name:"{\"translate\":\"item.minecraft.shield\",\"italic\":\"false\"}"},HideFlags:1b}
+execute if score normal_shield offhand_counts matches 1.. run give @s minecraft:shield{artefact:{offhand_placeholder:1b,item_type:["shield"]},CustomModelData:1,Unbreakable:1b,display:{Name:'{"translate":"item.minecraft.shield","italic":"false"}'},HideFlags:1b}
 execute if score normal_shield offhand_counts matches 1.. run scoreboard players remove normal_shield offhand_counts 1
 
 #store *magic* shield with attributes count
-execute if score magic_shield offhand_counts matches 1.. run give @s minecraft:shield{artefact:{offhand_placeholder:1b,item_type:["magic_shield"]},CustomModelData:2,Unbreakable:1b,display:{Name:"{\"translate\":\"item.artefact.magic_shield\",\"italic\":\"false\"}"},HideFlags:1b}
+execute if score magic_shield offhand_counts matches 1.. run give @s minecraft:shield{artefact:{offhand_placeholder:1b,item_type:["magic_shield"]},CustomModelData:2,Unbreakable:1b,display:{Name:'{"translate":"item.artefact.magic_shield","italic":"false"}'},HideFlags:1b}
 execute if score magic_shield offhand_counts matches 1.. run scoreboard players remove magic_shield offhand_counts 1
 
 #check for item removal

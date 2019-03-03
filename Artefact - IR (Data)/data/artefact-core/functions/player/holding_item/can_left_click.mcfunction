@@ -3,6 +3,7 @@
 #called by artefact-core:player/tick
 
 #left-click detection
+execute unless entity @e[type=minecraft:slime,tag=left_click,tag=!remove,distance=..2] run data modify entity @e[type=minecraft:slime,tag=left_click,tag=!remove,distance=..2,limit=1] Pos set from entity @s Pos
 execute positioned ~ ~.75 ~ run tp @e[type=minecraft:slime,tag=left_click,tag=!remove] ^ ^ ^2
 
 execute if entity @e[type=minecraft:slime,tag=left_click,tag=!remove] run scoreboard players operation left_click_health.prev general = left_click_health general

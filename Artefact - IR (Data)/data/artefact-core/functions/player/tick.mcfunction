@@ -31,10 +31,10 @@ execute unless score @s food_bar = mana spells run function artefact-api:mana/ch
 execute if score @s food_bar matches 0.. if score @s food_bar = mana spells run effect clear @s minecraft:hunger
 execute if score @s food_bar = mana spells run effect clear @s minecraft:saturation
 
-execute if score mana spells matches 20 if score mana_regen clock matches 0.. run scoreboard players set mana_regen clock 0
+execute if score mana spells matches 20 if score mana_regen clock matches 1.. run scoreboard players set mana_regen clock 0
 execute unless score mana spells = @s food_bar run scoreboard players set mana_regen clock 0
 execute if score mana spells matches 0..19 if score mana spells = @s food_bar run scoreboard players add mana_regen clock 1
-execute if score mana_regen clock matches 40.. if score mana spells = @s food_bar run function artefact-core:player/regen_mana
+execute if score mana_regen clock >= mana_regen.threshold clock if score mana spells = @s food_bar run function artefact-api:mana/regenerate
 
 #energy
 xp set @a 0 points
@@ -64,8 +64,9 @@ execute if score timeout spells matches 40.. run function artefact-api:spells/re
 execute if data entity @s SelectedItem.tag.artefact.spells run tag @s add holding_spell
 execute unless data entity @s SelectedItem.tag.artefact.spells if entity @s[tag=holding_spell] run function artefact-api:spells/reset_activation
 
-#shields
+execute if score cooldown spells matches 1.. run function artefact-api:spells/cooldown
 
+#shields
 execute unless entity @s[scores={sneak_check=1..}] run function artefact-api:shield/reset_timer
 execute unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] run function artefact-api:shield/reset_timer
 execute unless score cooldown shield matches 0 run scoreboard players remove cooldown shield 1
@@ -94,9 +95,6 @@ execute if score @s health_bar > @s max_health run effect give @s minecraft:inst
 scoreboard players operation previous sel_hotbar_slot = @s sel_hotbar_slot
 execute store result score @s sel_hotbar_slot run data get entity @s SelectedItemSlot
 execute unless score previous sel_hotbar_slot = @s sel_hotbar_slot run playsound minecraft:entity.arrow.shoot player @s ~ ~ ~ .3 2 1
-
-#indicate to non-primary players who the primary player is
-particle minecraft:firework ~ ~2.25 ~ 0 0 0 0 1 force @a[tag=!primary]
 
 #actionbar
 execute if score actionbar_cooldown spells matches 1.. run scoreboard players remove actionbar_cooldown spells 1

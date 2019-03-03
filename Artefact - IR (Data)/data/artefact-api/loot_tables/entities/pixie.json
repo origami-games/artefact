@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1,artefact:{item:[\"pixie_dust\"],item_type:[\"dust\",\"no_execution\"]},display:{Name:\"{\\\"translate\\\":\\\"item.artefact.dust.pixie\\\",\\\"color\\\":\\\"light_purple\\\",\\\"italic\\\":\\\"false\\\"}\",Lore:[\"{\\\"translate\\\":\\\"item.artefact.dust.pixie.lore\\\"}\"]}}"
+              "tag": "{CustomModelData:1,artefact:{item:[\"pixie_dust\"],item_type:[\"dust\",\"no_execution\"]},display:{Name:'{\"translate\":\"item.artefact.dust.pixie\",\"color\":\"light_purple\",\"italic\":false}',Lore:['{\"translate\":\"item.artefact.dust.pixie.lore\"}']}}"
           },
           {
               "function": "minecraft:set_count",

@@ -7,7 +7,6 @@ playsound minecraft:entity.generic.explode player @a[distance=..20] ~ ~ ~ 1 1.5 
 playsound minecraft:entity.generic.explode player @a[distance=..20] ~ ~ ~ 1 1 1
 
 particle minecraft:flame ~ ~ ~ 0 1 0 .5 1000 force
-particle minecraft:enchanted_hit ~ ~ ~ 0 1 0 1 1000 force
 #functionality
 effect give @s minecraft:slow_falling 4 255 true
 
@@ -24,3 +23,4 @@ execute if entity @s[gamemode=adventure] run scoreboard players remove mana spel
 
 #start cooldown
 scoreboard players set cooldown spells 60
+scoreboard players operation last_used spells = discharge spell_id

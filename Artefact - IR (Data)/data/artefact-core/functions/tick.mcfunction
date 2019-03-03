@@ -9,6 +9,9 @@ execute unless entity @p[tag=primary] run function artefact-core:random_primary
 
 scoreboard players reset @a[tag=!primary]
 
+#indicate to non-primary players who the primary player is
+particle minecraft:firework ~ ~2.25 ~ 0 0 0 0 1 force @a[tag=!primary]
+
 #tags
 tag @e[type=#artefact-type:check_moving,nbt={Motion:[0.0d,0.0d,0.0d]}] remove moving
 tag @e[type=#artefact-type:check_moving,nbt=!{Motion:[0.0d,0.0d,0.0d]}] add moving
@@ -67,4 +70,4 @@ stopsound @a[tag=!primary] * minecraft:entity.player.attack.nodamage
 execute if score loaded general matches 1..2 as @a[tag=primary,gamemode=!spectator] at @s run function artefact-core:player/tick
 
 #check deaths
-execute as @a[scores={death_check=1..}] at @s run function artefact-core:player/death
+execute as @a[scores={death_check=1..}] at @s run function artefact-api:death

@@ -1,1 +1,1 @@
-give @s minecraft:carrot_on_a_stick{artefact:{treasure_bag:{type:"basic"}},CustomModelData:1,display:{Name:"[{\"translate\":\"item.artefact.treasure_bag.basic\",\"italic\":\"false\",\"color\":\"yellow\"},\" \",{\"translate\":\"item.artefact.treasure_bag\",\"italic\":\"false\",\"color\":\"yellow\"}]"}}
+give @s minecraft:carrot_on_a_stick{artefact:{treasure_bag:{type:"basic"}},CustomModelData:1,display:{Name:'[{"translate":"item.artefact.treasure_bag.basic","italic":"false","color":"yellow"}," ",{"translate":"item.artefact.treasure_bag","italic":"false","color":"yellow"}]'}}

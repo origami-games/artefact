@@ -4,4 +4,5 @@
 
 spreadplayers ~ ~ 5 8 false @s[tag=spawn_mob.zombie]
 spreadplayers ~ ~ 5 8 false @s[tag=spawn_mob.rat]
+spreadplayers ~ ~ 5 8 false @s[tag=spawn_mob.butterfly]
 spreadplayers ~ ~ 10 12 false @s[tag=spawn_mob.pixie]

@@ -19,3 +19,4 @@ execute if entity @s[gamemode=adventure] run scoreboard players remove mana spel
 
 #start cooldown
 scoreboard players set cooldown spells 60
+scoreboard players operation last_used spells = sprint spell_id
