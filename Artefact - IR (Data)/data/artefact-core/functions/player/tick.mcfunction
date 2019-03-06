@@ -33,7 +33,7 @@ execute if score @s food_bar = mana spells run effect clear @s minecraft:saturat
 
 execute if score mana spells matches 20 if score mana_regen clock matches 1.. run scoreboard players set mana_regen clock 0
 execute unless score mana spells = @s food_bar run scoreboard players set mana_regen clock 0
-execute if score mana spells matches 0..19 if score mana spells = @s food_bar run scoreboard players add mana_regen clock 1
+execute if score mana spells matches 0..19 if score mana spells = @s food_bar unless score cooldown spells matches 1.. run scoreboard players add mana_regen clock 1
 execute if score mana_regen clock >= mana_regen.threshold clock if score mana spells = @s food_bar run function artefact-api:mana/regenerate
 
 #energy
@@ -79,11 +79,11 @@ execute if score cooldown shield matches 1.. run function artefact-api:shield/co
 #camera flick
 #disabled - function artefact-api:flick/check
 
-#end hotbar slot menu
-function artefact-core:player/hotbar/remove/check
-
 #disable offhand
 function artefact-core:player/offhand/run_checks
+
+#abilities hotbar slots
+function artefact-core:player/hotbar/remove/check
 
 #max health score
 scoreboard players operation @s max_health = @s max_hearts
@@ -95,6 +95,9 @@ execute if score @s health_bar > @s max_health run effect give @s minecraft:inst
 scoreboard players operation previous sel_hotbar_slot = @s sel_hotbar_slot
 execute store result score @s sel_hotbar_slot run data get entity @s SelectedItemSlot
 execute unless score previous sel_hotbar_slot = @s sel_hotbar_slot run playsound minecraft:entity.arrow.shoot player @s ~ ~ ~ .3 2 1
+
+#indicate to non-primary players who the primary player is
+particle minecraft:firework ~ ~2.25 ~ 0 0 0 0 1 force @a[tag=!primary]
 
 #actionbar
 execute if score actionbar_cooldown spells matches 1.. run scoreboard players remove actionbar_cooldown spells 1

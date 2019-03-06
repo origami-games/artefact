@@ -9,6 +9,9 @@ tellraw @s {"text":"Spells Test Items","italic":true,"color":"gold"}
 tellraw @s {"text":"- Discharge","color":"gold","clickEvent":{"action":"run_command","value":"/function artefact-api:items/give/spell_test/discharge"}}
 tellraw @s {"text":"- Sprint","color":"gold","clickEvent":{"action":"run_command","value":"/function artefact-api:items/give/spell_test/sprint"}}
 tellraw @s {"text":"- Tornado","color":"gold","clickEvent":{"action":"run_command","value":"/function artefact-api:items/give/spell_test/tornado"}}
+tellraw @s {"text":"- Inferno","color":"gold","clickEvent":{"action":"run_command","value":"/function artefact-api:items/give/spell_test/inferno"}}
+tellraw @s {"text":"- Submerge","color":"gold","clickEvent":{"action":"run_command","value":"/function artefact-api:items/give/spell_test/submerge"}}
+tellraw @s {"text":"- Blitz","color":"gold","clickEvent":{"action":"run_command","value":"/function artefact-api:items/give/spell_test/blitz"}}
 tellraw @s ""
 
 tellraw @s {"text":"Drops","italic":true,"color":"gold"}

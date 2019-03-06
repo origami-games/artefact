@@ -1,0 +1,11 @@
+{
+	"parent": "artefact:skin/skulls/template_skull",
+	"textures": {
+		"north": "artefact:skin/skulls/goblin/north",
+		"down": "artefact:skin/skulls/goblin/down",
+		"east": "artefact:skin/skulls/goblin/east",
+		"south": "artefact:skin/skulls/goblin/south",
+		"up": "artefact:skin/skulls/goblin/up",
+		"west": "artefact:skin/skulls/goblin/west"
+	}
+}

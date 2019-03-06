@@ -43,6 +43,9 @@
     "text.artefact.spells.discharge": "Décharge",
     "text.artefact.spells.sprint": "Sprint",
     "text.artefact.spells.tornado": "Tornade",
+    "text.artefact.spells.inferno": "Enfer",
+    "text.artefact.spells.submerge": "Submerger",
+    "text.artefact.spells.blitz": "Foudre",
 
     "text.artefact.actionbar.spells.click_status.r_x_x": "§aR§7-§n?§r§7-?§r",
     "text.artefact.actionbar.spells.click_status.r_r_x": "§aR§7-§aR§7-§n?§r",
@@ -71,6 +74,7 @@
     "text.artefact.level.3": "[✦✦✦]",
 
     "entity.artefact.zombie": "Zombi",
+    "entity.artefact.zombie": "Farfadet",
     "entity.artefact.pixie": "Lutin",
     "entity.artefact.rat": "Rat",
     "entity.artefact.butterfly": "Papillon",

@@ -1,4 +1,4 @@
-#test spell action
+#spell action
 #@s - primary player
 #called by artefact-api:spells/activate_action
 

@@ -1,0 +1,13 @@
+{
+    "values": [
+        "#artefact-type:sprite",
+        "minecraft:player",
+        "minecraft:ender_dragon",
+        "minecraft:drowned",
+        "minecraft:squid",
+        "minecraft:pufferfish",
+        "minecraft:tropical_fish",
+        "minecraft:cod",
+        "minecraft:salmon"
+    ]
+}

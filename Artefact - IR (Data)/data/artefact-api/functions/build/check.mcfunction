@@ -5,7 +5,7 @@
 #store build number
 scoreboard players operation build_number.prev general = build_number general
 #update current build number ***MODIFY BUILD COUNT HERE***
-scoreboard players set build_number general 5
+scoreboard players set build_number general 6
 #if updating, send update message
 execute if score build_number.prev general < build_number general run tellraw @a {"translate":"text.artefact.core.update","clickEvent":{"action":"open_url","value":"https://github.com/ArtefactDev/Imperius-Return/releases"},"color":"aqua"}
 #if downdating, send warning message

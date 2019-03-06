@@ -5,6 +5,10 @@ CHANGELOG
 ### Changes
 #### Spells
 - Added Inferno spell [`R`-`R`-`L` / `inferno`]
+- Added Submerge spell [`R`-`L`-`R` / `submerge`]
+- Added Blitz spell [`R`-`R`-`R` / `blitz`]
+#### Entities
+- Added goblins
 #### Gameplay
 - Added continuous sound to spell `tornado`
 - Mana will now not regenerate during spell cooldowns

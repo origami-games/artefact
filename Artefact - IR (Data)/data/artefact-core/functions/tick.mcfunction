@@ -9,12 +9,14 @@ execute unless entity @p[tag=primary] run function artefact-core:random_primary
 
 scoreboard players reset @a[tag=!primary]
 
-#indicate to non-primary players who the primary player is
-particle minecraft:firework ~ ~2.25 ~ 0 0 0 0 1 force @a[tag=!primary]
+#fire stands
+execute as @e[tag=fire_stand] run data merge entity @s {Marker:1b,Fire:10s}
 
 #tags
 tag @e[type=#artefact-type:check_moving,nbt={Motion:[0.0d,0.0d,0.0d]}] remove moving
 tag @e[type=#artefact-type:check_moving,nbt=!{Motion:[0.0d,0.0d,0.0d]}] add moving
+
+scoreboard players add @e[tag=lifetime] lifetime 1
 
 execute as @e[tag=mob_top] at @s unless entity @e[tag=mob_bottom,distance=...5] positioned ~ ~-.775 ~ unless entity @e[tag=mob_bottom,distance=...5] run tag @s add remove
 execute as @e[tag=mob_vessel,tag=spawned] at @s positioned ~ ~.775 ~ unless entity @e[tag=mob_bottom,sort=nearest,limit=1,distance=...1] run tag @s add remove
@@ -67,7 +69,10 @@ clear @a[tag=!primary] minecraft:stick{artefact:{offhand_placeholder:1b}}
 stopsound @a[tag=!primary] * minecraft:entity.player.attack.nodamage
 
 #run primary player processes
-execute if score loaded general matches 1..2 as @a[tag=primary,gamemode=!spectator] at @s run function artefact-core:player/tick
+execute if score loaded general matches 1..2 as @a[tag=primary] at @s run function artefact-core:player/tick
+
+#other functions
+function artefact-api:spells/entity_checks
 
 #check deaths
 execute as @a[scores={death_check=1..}] at @s run function artefact-api:death

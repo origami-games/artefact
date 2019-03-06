@@ -7,6 +7,7 @@
                 { "predicate": {"custom_model_data": 1}, "model": "artefact:item/blank"},
 
                 { "predicate": {"custom_model_data": 2}, "model": "artefact:entity/rat"},
-                { "predicate": {"custom_model_data": 3}, "model": "artefact:entity/butterfly"}
+                { "predicate": {"custom_model_data": 3}, "model": "artefact:entity/butterfly"},
+                { "predicate": {"custom_model_data": 4}, "model": "artefact:entity/goblin"}
     ]
 }

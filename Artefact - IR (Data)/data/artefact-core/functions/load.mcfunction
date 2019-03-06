@@ -28,6 +28,8 @@ scoreboard objectives add energy dummy "Energy"
 scoreboard objectives add spells dummy "Spell Activation States"
 scoreboard objectives add spell_id dummy "Dynamic Spell IDs"
 
+scoreboard objectives add lifetime dummy "Entity Lifetimes"
+
 scoreboard objectives add shield dummy "Shield Activation States"
 
 scoreboard objectives add clock dummy "Clock"
@@ -35,10 +37,6 @@ scoreboard objectives add sel_hotbar_slot dummy "Selected Hotbar Slot"
 
 scoreboard objectives add max_hearts dummy "Max Hearts"
 scoreboard objectives add max_health dummy "Max Health"
-
-scoreboard players set discharge spell_id 0
-scoreboard players set sprint spell_id 1
-scoreboard players set tornado spell_id 2
 
 scoreboard players set threshold flick_math 50
 scoreboard players set y_rot.min shield 70
@@ -85,6 +83,7 @@ setworldspawn 0 0 0
 
 function artefact-api:click_detection/create_click
 function artefact-api:build/check
+function artefact-api:spells/set_ids
 
 datapack disable vanilla
 
