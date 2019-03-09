@@ -1,7 +1,7 @@
-CHANGELOG
+Changelog
 =========
 
-## [Source v0.0.0.6-pre (build 6)](https://github.com/ArtefactDev/Imperius-Return/archive/srv-v0.0.0.6-pre.zip)
+## [Source v0.0.0.6-pre (build 6)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.6-pre.zip)
 ### Changes
 #### Spells
 - Added Inferno spell [`R`-`R`-`L` / `inferno`]
@@ -15,9 +15,9 @@ CHANGELOG
 #### Technical
 - Added version number to resource pack description
 
-## [Source v0.0.0.5-pre (build 5)](https://github.com/ArtefactDev/Imperius-Return/archive/srv-v0.0.0.5-pre.zip)
+## [Source v0.0.0.5-pre (build 5)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.5-pre.zip)
 ### Bug Fixes
-- [[#9]](https://github.com/ArtefactDev/Imperius-Return/issues/9) Function `artefact-api:entities/spawn/radius/butterfly` does not exist
+- [[#9]](https://github.com/ArtefactDev/imperius-return/issues/9) Function `artefact-api:entities/spawn/radius/butterfly` does not exist
 ### Changes
 #### Spells
 - Added Tornado spell [`R`-`L`-`L` / `tornado`]
@@ -41,9 +41,9 @@ CHANGELOG
 - Removed unused 'flick' check
 - Removed unused loot table `minecraft:blocks/shulker_box`
 
-## [Source v0.0.0.4-pre (build 4)](https://github.com/ArtefactDev/Imperius-Return/archive/src-v0.0.0.4-pre.zip)
+## [Source v0.0.0.4-pre (build 4)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.4-pre.zip)
 ### Bug Fixes
-- [[#8]](https://github.com/ArtefactDev/Imperius-Return/issues/8) Removing magic shield from offhand while still activating does not reset timer
+- [[#8]](https://github.com/ArtefactDev/imperius-return/issues/8) Removing magic shield from offhand while still activating does not reset timer
 ### Changes
 #### Gameplay
 - Shield type now displays in the attribute status icon (offhand slot)
@@ -56,17 +56,17 @@ CHANGELOG
 - If you are not holding an item with a spell, you will now go out of spell activation state
 - Removed jump boost effect from spell `discharge`
 
-## [Source v0.0.0.3-pre (build 3)](https://github.com/ArtefactDev/Imperius-Return/archive/src-v0.0.0.3-pre.zip)
+## [Source v0.0.0.3-pre (build 3)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.3-pre.zip)
 ### Bug Fixes
-- [[#6]](https://github.com/ArtefactDev/Imperius-Return/issues/6) Build check still runs feedback tellraw if a player hasn't ran the command
-- [[#7]](https://github.com/ArtefactDev/Imperius-Return/issues/7) Discharge spell's slow falling effect is inconsistent
+- [[#6]](https://github.com/ArtefactDev/imperius-return/issues/6) Build check still runs feedback tellraw if a player hasn't ran the command
+- [[#7]](https://github.com/ArtefactDev/imperius-return/issues/7) Discharge spell's slow falling effect is inconsistent
 ### Changes
 #### Gameplay
 - Added magic shields' functionality `/function artefact-api:items/give/shield/magic`
   - While in offhand, look down, sneak and wait to activate
   - 5 second cooldown
   - 3 second charge-up
-- Made lapis lazuli ore block animated [[#5]](https://github.com/ArtefactDev/Imperius-Return/issues/5)
+- Made lapis lazuli ore block animated [[#5]](https://github.com/ArtefactDev/imperius-return/issues/5)
 #### Entities
 - Added butterflies
   - **Needs model, animation and texture**
@@ -82,10 +82,10 @@ CHANGELOG
 - Made server version check armour stand invisible
 - Different spells can now have different mana amounts taken away
 
-## [Source v0.0.0.2-pre (build 2)](https://github.com/ArtefactDev/Imperius-Return/archive/src-v0.0.0.2-pre.zip)
+## [Source v0.0.0.2-pre (build 2)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.2-pre.zip)
 ### Bug Fixes
-- [[#1]](https://github.com/ArtefactDev/Imperius-Return/issues/1) Glass panes show missing texture icon
-- [[#4]](https://github.com/ArtefactDev/Imperius-Return/issues/4) Mana gets set to `0` on death even in creative mode
+- [[#1]](https://github.com/ArtefactDev/imperius-return/issues/1) Glass panes show missing texture icon
+- [[#4]](https://github.com/ArtefactDev/imperius-return/issues/4) Mana gets set to `0` on death even in creative mode
 ### Changes
 #### Gameplay
 - Added a tutorial-like feature
@@ -98,7 +98,7 @@ CHANGELOG
 - Dropped items display their names
 - Changed the above-head levels system to a 1-3 stars rating
 
-## [Source v0.0.0.1-pre (build 1)](https://github.com/ArtefactDev/Imperius-Return/archive/src-v0.0.0.1-pre.zip)
+## [Source v0.0.0.1-pre (build 1)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.1-pre.zip)
 To test the source code, install the resource pack, load up a creative void world and install the data pack into it. Run `/reload` and get going!
 Here's a run-down of everything added so far:
 #### Mechanics
