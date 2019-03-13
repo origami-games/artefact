@@ -20,6 +20,9 @@ Changelog
 #### Technical
 - Added version number to resource pack description
 
+### Other Commits
+- [`7fd3156`](https://github.com/ArtefactDev/imperius-return/commit/7fd31563e6815ac7c9c57cbd58b7e7145c08a785) Fixed headings to match wiki
+
 -----
 
 ## [Source v0.0.0.5-pre (build 5)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.5-pre.zip)
@@ -71,6 +74,9 @@ Changelog
 - If you are not holding an item with a spell, you will now go out of spell activation state
 - Removed jump boost effect from spell `discharge`
 
+### Other Commits
+- [`1ca4100`](https://github.com/ArtefactDev/imperius-return/commit/1ca4100a9e8b442ca5809e7d1a9bcad7272de726) Fixed repetition of `Bug Fixes` heading
+
 -----
 
 ## [Source v0.0.0.3-pre (build 3)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.3-pre.zip)
@@ -103,6 +109,9 @@ Changelog
 - Made server version check armour stand invisible
 - Different spells can now have different mana amounts taken away
 
+### Other Commits
+- [`45142e2`](https://github.com/ArtefactDev/imperius-return/commit/45142e23af78fc80e69088792af2bd80af4e998a) Added set categories to issue templates
+
 -----
 
 ## [Source v0.0.0.2-pre (build 2)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.2-pre.zip)
@@ -123,6 +132,11 @@ Changelog
 - Added rats
 - Dropped items display their names
 - Changed the above-head levels system to a 1-3 stars rating
+
+### Other Commits
+- [`2ad94d8`](https://github.com/ArtefactDev/imperius-return/commit/2ad94d800b36dd631156bac07e51d9f88a650f0a) [[#3](https://github.com/ArtefactDev/imperius-return/issues/3)] Made feature request template clearer
+- [`e76ac5a`](https://github.com/ArtefactDev/imperius-return/commit/e76ac5af2e390cf679fd691178ea87d36c0f9381) Renamed `custom-issue.md` to `custom_issue.md`
+- [`64b30c8`](https://github.com/ArtefactDev/imperius-return/commit/64b30c8dc711eeb1fa6c1dce0122b86a61243c9b) [[#1](https://github.com/ArtefactDev/imperius-return/issues/1)] Fixed glass panes not rendering in inventory
 
 -----
 
@@ -183,5 +197,14 @@ NPCs are simply Minecraft players as entities
 #### Items
 - Pixie Dust
   - Can be dropped to spawn more pixies
+
+### Other Commits
+- [`6112ea1`](https://github.com/ArtefactDev/imperius-return/commit/6112ea1c7581e15eca2fa24fbad025c47a243a57) Modified summary
+- [`31a45c5`](https://github.com/ArtefactDev/imperius-return/commit/31a45c543bde2731632f3497bcd98eb571d2409c) Added custom-issue template
+- [`bfe2adc`](https://github.com/ArtefactDev/imperius-return/commit/bfe2adc19f4bdc852de39e76fcacf3e8eee9f0f3) Update issue templates
+- [`04b4181`](https://github.com/ArtefactDev/imperius-return/commit/04b418119d4ec5db678aed9fb22c916e3726b687) Modified summary
+- [`3a76ba0`](https://github.com/ArtefactDev/imperius-return/commit/3a76ba02a4d0f9a8872fe31baa895a05bb48a879) Create README.md
+- [`87192d4`](https://github.com/ArtefactDev/imperius-return/commit/87192d41c19b5ccf3e26d509d2d6cad982cc2ad4) Rename LICENSE to LICENSE.md
+- [`f85534a`](https://github.com/ArtefactDev/imperius-return/commit/f85534a2d67232b38b5c93c7a91512a2310d6b67) Initial commit
 
 -----
