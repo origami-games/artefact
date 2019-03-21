@@ -4,6 +4,7 @@
 
 #default
 execute unless block ~ ~ ~ #artefact-type:slowing unless block ~ ~-.4 ~ #artefact-type:slowing unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["shield"]}}}]}] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] run function artefact-core:player/offhand/replace/default
+execute unless block ~ ~ ~ #artefact-type:slowing unless block ~ ~-.4 ~ #artefact-type:slowing unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["shield"]}}}]}] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] if entity @s[nbt={Inventory:[{Slot:-106b,tag:{AttributeModifiers:[{Slot:"offhand",AttributeName:"generic.movementSpeed",Name:"generic.movementSpeed",Amount:-.35,Operation:1,UUIDLeast:2,UUIDMost:2}]}}]}] run function artefact-core:player/offhand/replace/force/default
 #slowing
 execute if block ~ ~ ~ #artefact-type:slowing if entity @s[nbt={abilities:{flying:0b}}] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["shield"]}}}]}] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] run function artefact-core:player/offhand/replace/slowing
 execute if block ~ ~-.4 ~ #artefact-type:slowing if entity @s[nbt={abilities:{flying:0b}}] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["shield"]}}}]}] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] run function artefact-core:player/offhand/replace/slowing

@@ -13,5 +13,5 @@ tellraw @a [{"selector":"@s","color":"red","italic":true}," ",{"translate":"deat
 scoreboard players set @s death_check 0
 execute if entity @s[gamemode=!creative,gamemode=!spectator] run scoreboard players set mana spells 1
 scoreboard players set mana_regen clock 0
-function artefact-api:click_detection/create_click
+function artefact-api:action_detection/create_click
 function artefact-api:spells/reset_activation

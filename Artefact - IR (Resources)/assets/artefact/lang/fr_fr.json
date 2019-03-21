@@ -8,10 +8,17 @@
     "text.artefact.core.server_version.too_low": "Vous ne jouez pas dans la version correcte de Minecraft! Désactiver le pack...",
     "text.artefact.core.server_version.too_low.done": "Pack désactivé",
 
+    "text.artefact.border.top": "-----\n",
+    "text.artefact.border.bottom": "\n-----",
+
     "tutorial.artefact.prefix": "Conseil",
+    "tutorial.artefact.warning_prefix": "Attention",
     "tutorial.artefact.spells.main": "Vous activez des sorts dans des combinaisons de clics",
     "tutorial.artefact.spells.right": "Soumettre R",
     "tutorial.artefact.spells.left": "Soumettre L",
+    "tutorial.artefact.abilities.main": "Les capacités vous permettent de réaliser des cascades qui affectent les entités autour de vous",
+    "tutorial.artefact.abilities.right": "Activer la capacité de fente",
+    "tutorial.artefact.abilities.attack_warning": "Vous ne pouvez pas attaquer des entités lorsqu'un emplacement de capacité est sélectionné",
 
     "death.artefact.player": "est mort(e)",
 
@@ -26,7 +33,9 @@
 
     "text.artefact.mana.regenerating": "Mana régénérant...",
 
-    "bossbar.artefact.shield.timer": "Invocation des forces..",
+    "bossbar.artefact.shield.timer": "Invocation des forces...",
+    "bossbar.artefact.abilities.rage.timer": "Frapper une entité pour activer",
+    "bossbar.artefact.abilities.energy_sucker_punch.timer": "Frapper une entité pour activer",
 
     "text.artefact.offhand.shield_type": "Bouclier",
     "text.artefact.offhand.shield_type.normal": "Ordinaire",
@@ -46,6 +55,21 @@
     "text.artefact.spells.inferno": "Enfer",
     "text.artefact.spells.submerge": "Submerger",
     "text.artefact.spells.blitz": "Foudre",
+
+    "ability.artefact.rage": "Rage",
+    "ability.artefact.indomitable_stomp": "Piétinement Indomptable",
+    "ability.artefact.energy_sucker_punch": "Punch À Ventouse Énergétique",
+    "ability.artefact.rush": "Rush",
+
+    "stun.artefact.rise": "Monter",
+
+    "text.artefact.abilities.lore.tier": "Étage",
+    "text.artefact.abilities.lore.stun": "Étourdir",
+    "text.artefact.abilities.lore.stun.none": "Aucun",
+    "text.artefact.abilities.not_enough_energy.tier_1": "Vous avez besoin de 20 points d'énergie pour utiliser cette capacité",
+    "text.artefact.abilities.not_enough_energy.tier_2": "Vous avez besoin de 30 points d'énergie pour utiliser cette capacité",
+    "text.artefact.abilities.not_enough_energy.tier_3": "Vous avez besoin de 40 points d'énergie pour utiliser cette capacité",
+    "text.artefact.abilities.not_enough_energy.tier_4": "Vous avez besoin de 50 points d'énergie pour utiliser cette capacité",
 
     "text.artefact.actionbar.spells.click_status.r_x_x": "§aR§7-§n?§r§7-?§r",
     "text.artefact.actionbar.spells.click_status.r_r_x": "§aR§7-§aR§7-§n?§r",
@@ -68,11 +92,6 @@
     "item.artefact.treasure_bag.legendary": "Légendaire",
     "item.artefact.treasure_bag.legendary.use": "Légendaire treasure bag ouvert",
 
-    "text.artefact.level.undefined": "[§cNombre D'étoiles Non Défini§7]",
-    "text.artefact.level.1": "[✦  ]",
-    "text.artefact.level.2": "[✦✦ ]",
-    "text.artefact.level.3": "[✦✦✦]",
-
     "entity.artefact.zombie": "Zombi",
     "entity.artefact.zombie": "Farfadet",
     "entity.artefact.pixie": "Lutin",
@@ -85,5 +104,8 @@
     "gui.recipebook.toggleRecipes.smeltable": "",
     "gui.recipebook.toggleRecipes.blastable": "",
     "gui.recipebook.toggleRecipes.smokable": "",
-    "container.crafting": ""
+    "container.crafting": "",
+    "soundCategory.player": "Joueurs/Magie",
+
+    "block.minecraft.smooth_stone": "Pierre Renforcée"
 }

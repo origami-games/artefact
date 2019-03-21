@@ -1,6 +1,6 @@
 #runs if spell state is at 3
 #@s - primary player
-#called by artefact-api:click_detection/[left_click/right_click]
+#called by artefact-api:action_detection/[left_click/right_click]
 
 #check item
 execute if score mana spells matches 6.. if entity @s[nbt={SelectedItem:{tag:{artefact:{spells:["discharge"]}}}}] if score click_2 spells matches 1 if score click_3 spells matches 2 run function artefact-api:spells/action/discharge

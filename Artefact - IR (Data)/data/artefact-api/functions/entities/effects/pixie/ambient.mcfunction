@@ -4,4 +4,4 @@
 
 #audiovisuals
 particle minecraft:composter ~ ~ ~ .15 .15 .15 0 1 normal @a
-#playsound minecraft:entity.bat.ambient hostile @a[distance=..20] ~ ~ ~ 100 1.75 1
+#playsound minecraft:entity.bat.ambient hostile @a[distance=..20] ~ ~ ~ 1 1.75 1

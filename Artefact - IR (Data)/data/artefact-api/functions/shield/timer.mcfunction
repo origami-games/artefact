@@ -2,7 +2,7 @@
 #@s - primary player
 #called by artefact-api:shield/check_sneak
 
-bossbar set artefact-api:shield/timer players @s
+bossbar set artefact-api:shield/timer visible true
 scoreboard players add timer shield 1
 
 execute if score timer shield matches 0..19 run bossbar set artefact-api:shield/timer value 0

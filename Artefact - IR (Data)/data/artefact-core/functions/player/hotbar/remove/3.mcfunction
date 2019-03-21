@@ -3,8 +3,14 @@
 #called by artefact-core:player/hotbar/remove/check
 
 #store slot in item entity
-execute if entity @s[nbt={Inventory:[{Slot:3b}]}] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:1,artefact:{hotbar_replacement:1b}}},Tags:["slot.3"]}
+execute if entity @s[nbt={Inventory:[{Slot:3b}]}] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:1,artefact:{hotbar_replacement:1b}}},Tags:["slot.3","no_pickup"]}
 data modify entity @e[type=minecraft:item,tag=slot.3,sort=nearest,limit=1] Item merge from entity @s Inventory[{Slot:3b}]
 data remove entity @e[type=minecraft:item,tag=slot.3,sort=nearest,limit=1] Item.tag.CustomModelData
+data remove entity @e[type=minecraft:item,tag=slot.3,sort=nearest,limit=1] Item.tag.artefact.hotbar_replacement
+
+execute store result score artefact_tag_count hotbar_counts run data get entity @e[type=minecraft:item,tag=slot.3,sort=nearest,limit=1] Item.tag.artefact
+execute if score artefact_tag_count hotbar_counts matches 0 run data remove entity @e[type=minecraft:item,tag=slot.3,sort=nearest,limit=1] Item.tag.artefact
+scoreboard players reset artefact_tag_count hotbar_counts
 #replace with menu item
-replaceitem entity @s hotbar.3 minecraft:andesite{artefact:{hotbar_item:["3"],is_hotbar_item:1b}}
+replaceitem entity @s hotbar.3 minecraft:air
+function artefact-api:abilities/selector_slot/check/slot_3

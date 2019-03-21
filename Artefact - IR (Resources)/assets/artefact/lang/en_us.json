@@ -8,10 +8,17 @@
     "text.artefact.core.server_version.too_low": "You are not playing in the correct Minecraft version! Disabling pack...",
     "text.artefact.core.server_version.too_low.done": "Pack disabled",
 
+    "text.artefact.border.top": "-----\n",
+    "text.artefact.border.bottom": "\n-----",
+
     "tutorial.artefact.prefix": "Tip",
+    "tutorial.artefact.warning_prefix": "Warning",
     "tutorial.artefact.spells.main": "You activate spells in click combinations",
     "tutorial.artefact.spells.right": "Submit R",
     "tutorial.artefact.spells.left": "Submit L",
+    "tutorial.artefact.abilities.main": "Abilities allow you to perform stunts that affect entities around you",
+    "tutorial.artefact.abilities.right": "Activate slotted ability",
+    "tutorial.artefact.abilities.attack_warning": "You cannot attack entities while an ability slot is selected",
 
     "death.artefact.player": "died",
 
@@ -27,6 +34,8 @@
     "text.artefact.mana.regenerating": "Mana regenerating...",
 
     "bossbar.artefact.shield.timer": "Summoning forces...",
+    "bossbar.artefact.abilities.rage.timer": "Hit an entity to activate",
+    "bossbar.artefact.abilities.energy_sucker_punch.timer": "Hit an entity to activate",
 
     "text.artefact.offhand.shield_type": "Shield",
     "text.artefact.offhand.shield_type.normal": "Normal",
@@ -46,6 +55,21 @@
     "text.artefact.spells.inferno": "Inferno",
     "text.artefact.spells.submerge": "Submerge",
     "text.artefact.spells.blitz": "Blitz",
+
+    "ability.artefact.rage": "Rage",
+    "ability.artefact.indomitable_stomp": "Indomitable Stomp",
+    "ability.artefact.energy_sucker_punch": "Energy Sucker Punch",
+    "ability.artefact.rush": "Rush",
+
+    "stun.artefact.rise": "Rise",
+
+    "text.artefact.abilities.lore.tier": "Tier",
+    "text.artefact.abilities.lore.stun": "Stun",
+    "text.artefact.abilities.lore.stun.none": "None",
+    "text.artefact.abilities.not_enough_energy.tier_1": "You need 20 energy to use this ability",
+    "text.artefact.abilities.not_enough_energy.tier_2": "You need 30 energy to use this ability",
+    "text.artefact.abilities.not_enough_energy.tier_3": "You need 40 energy to use this ability",
+    "text.artefact.abilities.not_enough_energy.tier_4": "You need 50 energy to use this ability",
 
     "text.artefact.actionbar.spells.click_status.r_x_x": "§aR§7-§n?§r§7-?§r",
     "text.artefact.actionbar.spells.click_status.r_r_x": "§aR§7-§aR§7-§n?§r",
@@ -67,11 +91,6 @@
     "item.artefact.treasure_bag.legendary": "Legendary",
     "item.artefact.treasure_bag.legendary.use": "Opened legendary treasure bag",
 
-    "text.artefact.level.undefined": "§7[§cStar Rating Undefined§7]",
-    "text.artefact.level.1": "[✦  ]",
-    "text.artefact.level.2": "[✦✦ ]",
-    "text.artefact.level.3": "[✦✦✦]",
-
     "entity.artefact.zombie": "Zombie",
     "entity.artefact.zombie": "Goblin",
     "entity.artefact.pixie": "Pixie",
@@ -84,5 +103,8 @@
     "gui.recipebook.toggleRecipes.smeltable": "",
     "gui.recipebook.toggleRecipes.blastable": "",
     "gui.recipebook.toggleRecipes.smokable": "",
-    "container.crafting": ""
+    "container.crafting": "",
+    "soundCategory.player": "Players/Magic",
+
+    "block.minecraft.smooth_stone": "Reinforced Stone"
 }

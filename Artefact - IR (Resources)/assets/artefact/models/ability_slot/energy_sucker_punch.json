@@ -1,0 +1,6 @@
+{
+    "parent": "artefact:ability_slot/template",
+    "textures": {
+        "layer0": "artefact:ability_slot/energy_sucker_punch"
+    }
+}

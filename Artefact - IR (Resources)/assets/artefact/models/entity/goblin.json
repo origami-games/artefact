@@ -1,5 +1,5 @@
 {
-	"parent": "artefact:skin/skulls/template_skull",
+	"parent": "artefact:skin/skulls/template_skull_head",
 	"textures": {
 		"north": "artefact:skin/skulls/goblin/north",
 		"down": "artefact:skin/skulls/goblin/down",

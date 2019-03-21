@@ -2,6 +2,9 @@
 #@s - primary player
 #called by artefact-core:player/tick
 
+#remove inventory offhand placeholders
+clear @s[nbt={Inventory:[{tag:{artefact:{offhand_placeholder:1b,item_type:["remove_offhand"]}}}]},nbt=!{Inventory:[{Slot:-106b,tag:{artefact:{offhand_placeholder:1b,item_type:["remove_offhand"]}}}]}] minecraft:stick{artefact:{offhand_placeholder:1b,item_type:["remove_offhand"]}}
+
 #ensure max hearts are correct
 execute unless score @s max_hearts matches 0.. run scoreboard players set @s max_hearts 4
 
@@ -21,7 +24,7 @@ execute if score magic_shield offhand_counts matches 1.. run scoreboard players 
 #check for item removal
 execute unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{is_hotbar_item:1b}}}]}] if entity @s[nbt={Inventory:[{Slot:-106b}]},nbt=!{Inventory:[{Slot:-106b,tag:{artefact:{offhand_placeholder:1b}}}]},nbt=!{Inventory:[{Slot:-106b,tag:{artefact:{item_type:["shield"]}}}]},nbt=!{Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] run function artefact-core:player/offhand/remove
 
-#check 'attributeModifier'
+#check `attributeModifier`
 function artefact-core:player/offhand/replace/check
 
 #store offhand placeholder sticks count

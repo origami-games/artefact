@@ -2,12 +2,25 @@
 #@s - primary player
 #called by artefact-core:tick
 
-#initial
+#pre
+## general
 gamemode adventure @s[gamemode=survival]
 scoreboard players set loaded general 2
 
+bossbar set artefact-api:shield/timer players @s
+bossbar set artefact-api:abilities/cooldown players @s
+bossbar set artefact-api:abilities/rage/timer players @s
+bossbar set artefact-api:abilities/energy_sucker_punch/timer players @s
+## other functions
+#function artefact-api:check_health_items
+
 #tutorial
 execute unless entity @s[tag=tutorial.spells] if data entity @s SelectedItem.tag.artefact.spells run function artefact-api:tutorial/spells
+execute unless entity @s[tag=tutorial.abilities] if data entity @s SelectedItem.tag.artefact.hotbar_item run function artefact-api:tutorial/abilities
+
+#no swing items
+execute if entity @s[nbt={SelectedItem:{tag:{artefact:{no_swing:1b}}}}] run effect give @s minecraft:haste 1 39 true
+execute unless entity @s[nbt={SelectedItem:{tag:{artefact:{no_swing:1b}}}}] if entity @s[nbt={ActiveEffects:[{Id:3b,Amplifier:39b,ShowParticles:0b}]}] run effect clear @s minecraft:haste
 
 #clear items
 clear @s #artefact-type:no_pickup{artefact:{no_pickup:1b}}
@@ -37,26 +50,33 @@ execute if score mana spells matches 0..19 if score mana spells = @s food_bar un
 execute if score mana_regen clock >= mana_regen.threshold clock if score mana spells = @s food_bar run function artefact-api:mana/regenerate
 
 #energy
+execute if score level energy matches 0..99 unless score @s xp_score = @s xp_score.prev run scoreboard players add level energy 1
+scoreboard players operation @s xp_score.prev = @s xp_score
 xp set @a 0 points
+execute unless score level energy matches 0..100 run scoreboard players set level energy 100
+
 execute store result score level_bar energy run xp query @s levels
 execute unless score level_bar energy = level energy run function artefact-api:energy/check_level
 
 #left/right click
 execute if score cooldown spells matches 1.. run scoreboard players remove cooldown spells 1
 
-execute if score state spells matches 1.. if entity @s[gamemode=!spectator,nbt={SelectedItem:{tag:{artefact:{can_left_click:1b}}}}] run function artefact-core:player/holding_item/can_left_click
-execute if entity @s[gamemode=!spectator,nbt={SelectedItem:{tag:{artefact:{can_right_click:1b}}}}] run function artefact-core:player/holding_item/can_right_click
+execute if score state spells matches 1.. if entity @s[gamemode=!spectator,nbt={SelectedItem:{tag:{artefact:{can_click:1b}}}}] run function artefact-core:player/holding_item/spells/can_left_click
 
-execute unless entity @s[nbt={SelectedItem:{tag:{artefact:{can_left_click:1b}}}}] run tp @e[type=minecraft:slime,tag=left_click] 0 0 0
-
-stopsound @s player minecraft:entity.player.attack.strong
-stopsound @s player minecraft:entity.player.attack.knockback
-stopsound @s player minecraft:entity.player.attack.weak
-
-scoreboard players set @s damage_dealt 0
+execute unless entity @s[nbt={SelectedItem:{tag:{artefact:{can_left_click:1b}}}}] run tp @e[type=minecraft:slime,tag=left_click] 0 1 0
+scoreboard players set @s left_click 0
 
 #right-click detection
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick"}}] run function artefact-core:player/holding_item/carrot_on_a_stick
+
+#shield
+execute unless entity @s[scores={sneak_check=1..}] run function artefact-api:shield/reset_timer
+execute unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] run function artefact-api:shield/reset_timer
+execute if entity @s[nbt={abilities:{flying:1b}}] run function artefact-api:shield/reset_timer
+execute unless score cooldown shield matches 0 run scoreboard players remove cooldown shield 1
+
+#sneak detection
+execute if entity @s[scores={sneak_check=1..}] run function artefact-api:action_detection/sneak
 
 #spells
 execute if score state spells matches 1.. run scoreboard players add timeout spells 1
@@ -66,23 +86,16 @@ execute unless data entity @s SelectedItem.tag.artefact.spells if entity @s[tag=
 
 execute if score cooldown spells matches 1.. run function artefact-api:spells/cooldown
 
-#shields
-execute unless entity @s[scores={sneak_check=1..}] run function artefact-api:shield/reset_timer
-execute unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] run function artefact-api:shield/reset_timer
-execute unless score cooldown shield matches 0 run scoreboard players remove cooldown shield 1
-execute if score cooldown shield matches 1.. run scoreboard players set @s sneak_check 0
-execute if entity @s[scores={sneak_check=1..},nbt=!{Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] unless score cooldown shield matches 1.. run scoreboard players set @s sneak_check 0
-execute if entity @s[scores={sneak_check=1..},nbt={Inventory:[{Slot:-106b,tag:{artefact:{item_type:["magic_shield"]}}}]}] unless score cooldown shield matches 1.. run function artefact-api:shield/check_sneak
-
 execute if score cooldown shield matches 1.. run function artefact-api:shield/continuous_visuals
 
-#camera flick
-#disabled - function artefact-api:flick/check
+#abilities
+function artefact-api:abilities/run_checks
 
 #disable offhand
 function artefact-core:player/offhand/run_checks
 
-#abilities hotbar slots
+#abilities
+function artefact-api:stuns/run_checks
 function artefact-core:player/hotbar/remove/check
 
 #max health score
@@ -98,6 +111,9 @@ execute unless score previous sel_hotbar_slot = @s sel_hotbar_slot run playsound
 
 #indicate to non-primary players who the primary player is
 particle minecraft:firework ~ ~2.25 ~ 0 0 0 0 1 force @a[tag=!primary]
+
+#damage dealt
+execute if score @s damage_dealt matches 1.. run function artefact-api:action_detection/damaged_entity
 
 #actionbar
 execute if score actionbar_cooldown spells matches 1.. run scoreboard players remove actionbar_cooldown spells 1

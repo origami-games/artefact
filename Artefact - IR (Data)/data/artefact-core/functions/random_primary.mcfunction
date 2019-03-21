@@ -3,8 +3,6 @@
 #called arbitrarily
 
 #remove all primary players
-tag @e[tag=primary] remove primary
-#add a random primary player
-tag @r add primary
+execute as @r run function artefact-core:player/set_primary
 #notify players
-tellraw @a {"translate":"text.artefact.random_primary_player","color":"gold"}
+#tellraw @a {"translate":"text.artefact.random_primary_player","color":"gold"}

@@ -9,7 +9,8 @@ execute as @e[type=minecraft:armor_stand,tag=spell_visual.fire_explosion.post] a
 execute at @e[type=minecraft:falling_block,tag=spell_visual.fire_explosion.falling_block] run function artefact-api:spells/visual/inferno/damage
 
 #submerge
-execute as @e[type=minecraft:armor_stand,tag=spell_visual.rain] at @s run function artefact-api:spells/visual/submerge/effects
+execute as @e[type=minecraft:area_effect_cloud,tag=spell_visual.rain] at @s run function artefact-api:spells/visual/submerge/effects
 
 #generic checks
 kill @e[type=minecraft:armor_stand,tag=spell_visual,tag=!lifetime_manual_kill,scores={lifetime=100..}]
+kill @e[type=minecraft:area_effect_cloud,tag=spell_visual,tag=!lifetime_manual_kill,scores={lifetime=100..}]

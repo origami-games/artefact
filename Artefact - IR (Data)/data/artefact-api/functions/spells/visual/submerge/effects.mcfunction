@@ -2,6 +2,9 @@
 #@s - @e[type=minecraft:armor_stand,tag=spell_visual.rain]
 #called by artefact-api:spells/entity_checks
 
+#kill unless in correct block
+execute unless block ~ ~ ~ #artefact-api:spells/action/submerge/block run kill @s
+
 #damage
 execute positioned ~ ~-2 ~ run effect give @e[type=!#artefact-api:undead,type=!#artefact-api:spells/action/submerge/no_target,tag=mob,distance=..1] minecraft:instant_damage 1 0 true
 execute positioned ~ ~-2 ~ run effect give @e[type=#artefact-api:undead,type=!#artefact-api:spells/action/submerge/no_target,tag=mob,distance=..1] minecraft:instant_health 1 0 true

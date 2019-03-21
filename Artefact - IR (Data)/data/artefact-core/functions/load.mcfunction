@@ -15,18 +15,26 @@ scoreboard objectives add health.prev dummy "Health in Previous Tick"
 
 scoreboard objectives add food_until_mana dummy "Food Bar until Mana Score"
 scoreboard objectives add health_bar dummy "Health Bar Value"
-scoreboard objectives add flick_math dummy "Flick Maths"
 
 scoreboard objectives add food_bar food "Food Bar Value"
 scoreboard objectives add death_check deathCount "Death Check"
 scoreboard objectives add use_carrot_stick minecraft.used:minecraft.carrot_on_a_stick "Carrot on a Stick Use Check"
-scoreboard objectives add damage_dealt minecraft.custom:minecraft.damage_dealt "Damage Dealt"
+scoreboard objectives add left_click minecraft.custom:minecraft.damage_dealt "Left Click - Damage Dealt"
+scoreboard objectives add damage_dealt minecraft.custom:minecraft.damage_dealt "Damage Dealt Check"
 scoreboard objectives add sneak_check minecraft.custom:minecraft.sneak_time "Sneak Check"
 
 scoreboard objectives add energy dummy "Energy"
+scoreboard objectives add xp_score xp "XP Score"
+scoreboard objectives add xp_score.prev dummy "XP Score (Previous Tick)"
 
 scoreboard objectives add spells dummy "Spell Activation States"
 scoreboard objectives add spell_id dummy "Dynamic Spell IDs"
+
+scoreboard objectives add abilities dummy "Abilities"
+scoreboard objectives add ability_id dummy "Dynamic Ability IDs"
+scoreboard objectives add flick_math dummy "Flick Maths"
+
+scoreboard objectives add stun.rise dummy "Stun - Rise (Timer)"
 
 scoreboard objectives add lifetime dummy "Entity Lifetimes"
 
@@ -38,27 +46,61 @@ scoreboard objectives add sel_hotbar_slot dummy "Selected Hotbar Slot"
 scoreboard objectives add max_hearts dummy "Max Hearts"
 scoreboard objectives add max_health dummy "Max Health"
 
-scoreboard players set threshold flick_math 50
-scoreboard players set y_rot.min shield 70
+
+execute unless score slot_1 abilities matches 0.. run scoreboard players set slot_1 abilities 1
+execute unless score slot_2 abilities matches 0.. run scoreboard players set slot_2 abilities 2
+execute unless score slot_3 abilities matches 0.. run scoreboard players set slot_3 abilities 3
+
+scoreboard players set flick.timer.start abilities 50
+scoreboard players set esp.timer.start abilities 50
+scoreboard players set esp.math.multiplier abilities 2
+scoreboard players set esp.math.threshold.multiply abilities 50
+scoreboard players set esp.math.threshold.divide abilities 100
+scoreboard players set cooldown.start abilities 80
+
+scoreboard players set threshold stun.rise 50
+scoreboard players set threshold flick_math 26
+scoreboard players set y_rot.threshold shield 50
 scoreboard players set max_mana spells 20
 scoreboard players set heart_to_health_multiplier max_health 2
 scoreboard players set mana_regen.threshold clock 20
 scoreboard players set mana_required shield 2
 scoreboard players set negative_constant flick_math -1
 execute unless score mana spells matches 0.. run scoreboard players set mana spells 20
-execute unless score level energy matches 1.. run scoreboard players set level energy 1
+execute unless score level energy matches 0.. run scoreboard players set level energy 0
 execute unless score state spells matches 0.. run scoreboard players set state spells 0
 execute unless score cooldown spells matches 0.. run scoreboard players set cooldown spells 0
 execute unless score cooldown shield matches 0.. run scoreboard players set cooldown shield 0
 execute unless score custom_mob_spawning gamerule matches 0..1 run scoreboard players set custom_mob_spawning gamerule 1
 
-#initialise bossbars
+#initialise boss bars
 bossbar add artefact-api:shield/timer ""
 bossbar set artefact-api:shield/timer name {"translate":"bossbar.artefact.shield.timer","color":"light_purple"}
 bossbar set artefact-api:shield/timer style notched_12
 bossbar set artefact-api:shield/timer color purple
-bossbar set artefact-api:shield/timer visible true
+bossbar set artefact-api:shield/timer visible false
 bossbar set artefact-api:shield/timer max 3
+
+bossbar add artefact-api:abilities/cooldown ""
+bossbar set artefact-api:abilities/cooldown name ""
+bossbar set artefact-api:abilities/cooldown style progress
+bossbar set artefact-api:abilities/cooldown color green
+bossbar set artefact-api:abilities/cooldown visible false
+execute store result bossbar artefact-api:abilities/cooldown max run scoreboard players get cooldown.start abilities
+
+bossbar add artefact-api:abilities/rage/timer ""
+bossbar set artefact-api:abilities/rage/timer name {"translate":"bossbar.artefact.abilities.rage.timer","color":"red"}
+bossbar set artefact-api:abilities/rage/timer style progress
+bossbar set artefact-api:abilities/rage/timer color red
+bossbar set artefact-api:abilities/rage/timer visible false
+execute store result bossbar artefact-api:abilities/rage/timer max run scoreboard players get flick.timer.start abilities
+
+bossbar add artefact-api:abilities/energy_sucker_punch/timer ""
+bossbar set artefact-api:abilities/energy_sucker_punch/timer name {"translate":"bossbar.artefact.abilities.energy_sucker_punch.timer","color":"red"}
+bossbar set artefact-api:abilities/energy_sucker_punch/timer style progress
+bossbar set artefact-api:abilities/energy_sucker_punch/timer color red
+bossbar set artefact-api:abilities/energy_sucker_punch/timer visible false
+execute store result bossbar artefact-api:abilities/energy_sucker_punch/timer max run scoreboard players get esp.timer.start abilities
 
 #initialise teams
 team add no_collision
@@ -81,9 +123,10 @@ gamerule mobGriefing false
 #required aspects
 setworldspawn 0 0 0
 
-function artefact-api:click_detection/create_click
+function artefact-api:action_detection/create_click
 function artefact-api:build/check
 function artefact-api:spells/set_ids
+function artefact-api:abilities/set_ids
 
 datapack disable vanilla
 

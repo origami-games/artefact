@@ -18,5 +18,5 @@ summon minecraft:evoker_fangs ~ ~ ~-1
 
 scoreboard players set timer shield 0
 scoreboard players set cooldown shield 100
-scoreboard players operation mana spells -= mana_required shield
-bossbar set artefact-api:shield/timer players none
+execute if entity @s[gamemode=adventure] run scoreboard players operation mana spells -= mana_required shield
+bossbar set artefact-api:shield/timer visible false

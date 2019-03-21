@@ -3,6 +3,73 @@ Changelog
 
 -----
 
+## [Source v0.0.0.7-pre (build 7)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.7-pre.zip)
+### Bug Fixes
+- [[#10]](https://github.com/ArtefactDev/imperius-return/issues/10) Goblin summon button in command menu references wrong function
+- [[#11]](https://github.com/ArtefactDev/imperius-return/issues/11) Shields don't have lore applied when health is normal (10 hearts)
+
+### Changes
+#### Gameplay
+- Removed `CustomNameVisible` tags from entities (you now have to put your crosshair on an entity to see their name)
+- Decreased magic shield rotation threshold to `50`
+
+#### Textures
+- Added a few textures
+  - Lapis Block (temporary)
+  - Iron Block
+  - Tall Grass
+- Re-textured and renamed smooth stone to a custom block; reinforced stone
+- Grass path blocks now have a main texture of gravel
+  - Gravel texture itself *to be* changed
+
+#### Spells
+- Improved submerge effect
+  - The effect no longer replaces blocks - it only replaces air now
+  - Replaced `minecraft:ice` to be `minecraft:light_blue_stained_glass` as the ice melted
+  - Added removal effects (particles and a glass breaking sound)
+  - Entity summoned is now an area effect cloud instead of an armour stand
+
+#### Abilities
+- Added abilities 🎉
+- Added a way to gain energy
+  - Enabled experience orbs again - every experience orb taken equates to 1 energy level
+  - Some abilities regenerate energy
+- Slot selection system to be
+- Select an ability slot and right-click to use
+- Added `Rage`
+  - Sneak and flick your head up quickly, then attack a mob to gain strength, speed and regeneration for 4 seconds
+- Added `Indomitable Stomp`
+  - Launches you into the sky, only to be abruptly pulled back down to the floor with a thud, stunning nearby mobs
+  - Icon texture to be changed
+- Added `Energy Sucker Punch`
+  - The next enemy hit will receive +8 damage and the player will receive 2x the damage dealt as energy, as long as the amount of damage dealt is no more than 50
+- Added `Rush`
+  - When used, the player gets 4 seconds of speed. If the player hits an enemy while they still have that effect, within those 4 seconds, the amplifier for the speed will increase by 1 tier and 1 extra second (caps at `Speed V`)
+
+#### Entities
+- Goblins now make adult zombie damage sounds
+- Improved goblins' aesthetics
+- Removed star system
+
+#### Technical
+- Performance improvements
+- Added model `artefact:skin/skulls/template_skull_head`
+- Specified what Artefact map this is in `pack.mcmeta`s
+- You no longer activate your shield while sneaking and flying in creative/spectator mode
+- Renamed `artefact-api:click_detection/[...]` to `artefact-api:action_detection/[...]`
+- Reorganised the right-click detection system and its files (everything now roots from one file - `artefact-core:player/holding_item/carrot_on_a_stick`)
+- Changed all `ArtefactDev/Imperius-Return` to `ArtefactDev/imperius-return`, for new link
+- Dead slimes no longer load incorrectly at Y=`-512`, lag the game and spam the logs
+- Added an NBT tag that identifies all shield types `artefact:{is_shield:1b}`
+- Added resistance for when your scores are being reset so you don't die
+
+### Other Commits
+- [`d6bc169`](https://github.com/ArtefactDev/imperius-return/commit/d6bc1692f1ead14909d633ddbad8faad99a6f042) Added 'Other Commits' to `CHANGELOG.md`
+- [`fa5a0cc`](https://github.com/ArtefactDev/imperius-return/commit/fa5a0ccd53cb494342510724b58b63aa6f3a2ec8) Organised `CHANGELOG.md`
+- [`9def776`](https://github.com/ArtefactDev/imperius-return/commit/9def776558f17797c7a09336e02d7161f61ed797) Minor edits and fixes
+
+-----
+
 ## [Source v0.0.0.6-pre (build 6)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.6-pre.zip)
 ### Changes
 #### Spells
@@ -156,11 +223,11 @@ Some vanilla mechanics have been altered for a full RPG experience!
   - Used for abilities (to come)
 - Action Bar
   - Displays useful information
-    - Health
-    - Mana
-    - Current L/R click status
-    - Spell activation
-    - Spell recharge
+  - Health
+  - Mana
+  - Current L/R click status
+  - Spell activation
+  - Spell recharge
 - Hot Bar
   - Slots 2, 3 and 4 will be used for abilities
   - Currently placeholder'd with granite, diorite and andesite
