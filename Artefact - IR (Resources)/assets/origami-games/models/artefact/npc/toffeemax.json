@@ -1,0 +1,170 @@
+{
+	"textures": {
+		"skin": "origami-games:artefact/skin/player/toffeemax"
+	},
+	"elements": [
+		{
+			"name": "steve_right_leg",
+			"from": [4, -0.5, 6],
+			"to": [8, 11.5, 10],
+			"faces": {
+				"north": {"uv": [3.01, 5.01, 3.99, 7.99], "texture": "#skin"},
+				"east": {"uv": [2.01, 5.01, 2.99, 7.99], "texture": "#skin"},
+				"south": {"uv": [1.01, 5.01, 1.99, 7.99], "texture": "#skin"},
+				"west": {"uv": [0.01, 5.01, 0.99, 7.99], "texture": "#skin"},
+				"up": {"uv": [1.01, 4.01, 1.99, 4.99], "texture": "#skin"},
+				"down": {"uv": [2.01, 4.01, 2.99, 4.99], "rotation": 180, "texture": "#skin"}
+			}
+		},
+		{
+			"name": "steve_left_leg",
+			"from": [8, -0.5, 6],
+			"to": [12, 11.5, 10],
+			"faces": {
+				"north": {"uv": [8.01, 13.01, 6.99, 15.99], "texture": "#skin"},
+				"east": {"uv": [6.01, 13.01, 6.99, 15.99], "texture": "#skin"},
+				"south": {"uv": [5.01, 13.01, 5.99, 15.99], "texture": "#skin"},
+				"west": {"uv": [4.01, 13.01, 4.99, 15.99], "texture": "#skin"},
+				"up": {"uv": [5.01, 12.01, 5.99, 12.99], "texture": "#skin"},
+				"down": {"uv": [6.01, 12.01, 6.99, 12.99], "rotation": 180, "texture": "#skin"}
+			}
+		},
+		{
+			"name": "steve_body",
+			"from": [4, 11.5, 6],
+			"to": [12, 23.5, 10],
+			"faces": {
+				"north": {"uv": [8.01, 5.01, 9.99, 7.99], "texture": "#skin"},
+				"east": {"uv": [7.01, 5.01, 7.99, 7.99], "texture": "#skin"},
+				"south": {"uv": [5.01, 5.01, 6.99, 7.99], "texture": "#skin"},
+				"west": {"uv": [4.01, 5.01, 4.99, 7.99], "texture": "#skin"},
+				"up": {"uv": [5.01, 4.01, 6.99, 4.99], "texture": "#skin"},
+				"down": {"uv": [7.01, 4.01, 8.99, 4.99], "texture": "#skin"}
+			}
+		},
+		{
+			"name": "steve_head",
+			"from": [4, 23.5, 4],
+			"to": [12, 31.5, 12],
+			"faces": {
+				"north": {"uv": [6.01, 2.01, 6.99, 3.99], "texture": "#skin"},
+				"east": {"uv": [4.01, 2.01, 5.99, 3.99], "texture": "#skin"},
+				"south": {"uv": [2.01, 2.01, 3.99, 3.99], "texture": "#skin"},
+				"west": {"uv": [0.01, 2.01, 1.99, 3.99], "texture": "#skin"},
+				"up": {"uv": [2.01, 0.01, 3.99, 1.99], "texture": "#skin"},
+				"down": {"uv": [4.01, 0.01, 5.99, 1.99], "rotation": 180, "texture": "#skin"}
+			}
+		},
+		{
+			"name": "steve_right_arm",
+			"from": [0, 11.5, 6],
+			"to": [4, 23.5, 10],
+			"faces": {
+				"north": {"uv": [13.01, 5.01, 13.99, 7.99], "texture": "#skin"},
+				"east": {"uv": [10.01, 5.01, 10.99, 7.99], "texture": "#skin"},
+				"south": {"uv": [11.01, 5.01, 11.99, 7.99], "texture": "#skin"},
+				"west": {"uv": [12.01, 5.01, 12.99, 7.99], "texture": "#skin"},
+				"up": {"uv": [11.01, 4.01, 11.99, 4.99], "texture": "#skin"},
+				"down": {"uv": [12.01, 4.01, 12.99, 4.99], "texture": "#skin"}
+			}
+		},
+		{
+			"name": "steve_left_arm",
+			"from": [12, 11.5, 6],
+			"to": [16, 23.5, 10],
+			"faces": {
+				"north": {"uv": [11.01, 13.01, 11.99, 15.99], "texture": "#skin"},
+				"east": {"uv": [8.01, 13.01, 8.99, 15.99], "texture": "#skin"},
+				"south": {"uv": [9.01, 13.01, 9.99, 15.99], "texture": "#skin"},
+				"west": {"uv": [10.01, 13.01, 10.99, 15.99], "texture": "#skin"},
+				"up": {"uv": [9.01, 12.01, 9.99, 12.99], "texture": "#skin"},
+				"down": {"uv": [10.01, 12.01, 10.99, 12.99], "texture": "#skin"}
+			}
+		},
+		{
+			"name": "steve_head_2nd_layer",
+			"from": [3.5, 23, 3.5],
+			"to": [12.5, 32, 12.5],
+			"faces": {
+				"north": {"uv": [14.01, 2.01, 15.99, 3.99], "texture": "#skin"},
+				"east": {"uv": [12.01, 2.01, 13.99, 3.99], "texture": "#skin"},
+				"south": {"uv": [10.01, 2.01, 11.99, 3.99], "texture": "#skin"},
+				"west": {"uv": [8.01, 2.01, 9.99, 3.99], "texture": "#skin"},
+				"up": {"uv": [10.01, 0.01, 11.99, 1.99], "texture": "#skin"},
+				"down": {"uv": [12.01, 0.01, 13.99, 1.99], "rotation": 180, "texture": "#skin"}
+			}
+		},
+		{
+			"name": "steve_body_2nd_layer",
+			"from": [4, 11.02, 5.51],
+			"to": [12, 24.03, 10.51],
+			"faces": {
+				"north": {"uv": [8.01, 9.01, 9.99, 11.99], "texture": "#skin"},
+				"east": {"uv": [7.01, 9.01, 7.99, 11.99], "texture": "#skin"},
+				"south": {"uv": [5.01, 9.01, 6.99, 11.99], "texture": "#skin"},
+				"west": {"uv": [4.01, 9.01, 4.99, 11.99], "texture": "#skin"},
+				"up": {"uv": [5.01, 8.01, 6.99, 8.99], "texture": "#skin"},
+				"down": {"uv": [7.01, 8.01, 8.99, 8.99], "texture": "#skin"}
+			}
+		},
+		{
+			"name": "steve_right_arm_2nd_layer",
+			"from": [-0.5, 11, 5.5],
+			"to": [4.49, 24, 10.5],
+			"faces": {
+				"north": {"uv": [13.01, 9.01, 13.99, 11.99], "texture": "#skin"},
+				"east": {"uv": [10.01, 9.01, 10.99, 11.99], "texture": "#skin"},
+				"south": {"uv": [11.01, 9.01, 11.99, 11.99], "texture": "#skin"},
+				"west": {"uv": [10.01, 9.01, 10.99, 11.99], "texture": "#skin"},
+				"up": {"uv": [11.01, 8.01, 11.99, 8.99], "texture": "#skin"},
+				"down": {"uv": [12.01, 8.01, 12.99, 8.99], "rotation": 180, "texture": "#skin"}
+			}
+		},
+		{
+			"name": "steve_left_arm_2nd_layer",
+			"from": [11.5, 11, 5.5],
+			"to": [16.5, 24, 10.5],
+			"faces": {
+				"north": {"uv": [15.01, 13.01, 15.99, 15.99], "texture": "#skin"},
+				"east": {"uv": [12.01, 13.01, 12.99, 15.99], "texture": "#skin"},
+				"south": {"uv": [13.01, 13.01, 13.99, 15.99], "texture": "#skin"},
+				"west": {"uv": [14.01, 13.01, 14.99, 15.99], "texture": "#skin"},
+				"up": {"uv": [13.01, 12.01, 13.99, 12.99], "texture": "#skin"},
+				"down": {"uv": [14.01, 12.01, 14.99, 12.99], "texture": "#skin"}
+			}
+		},
+		{
+			"name": "steve_right_leg_2nd_layer",
+			"from": [3.5, -1, 5.5],
+			"to": [8.5, 12, 10.5],
+			"faces": {
+				"north": {"uv": [3.01, 9.01, 3.99, 11.99], "texture": "#skin"},
+				"east": {"uv": [2.01, 9.01, 2.99, 11.99], "texture": "#skin"},
+				"south": {"uv": [1.01, 9.01, 1.99, 11.99], "texture": "#skin"},
+				"west": {"uv": [0.01, 9.01, 0.99, 11.99], "texture": "#skin"},
+				"up": {"uv": [0, 0, 1, 1], "texture": "#skin"},
+				"down": {"uv": [2.01, 9.01, 2.99, 7.99], "texture": "#skin"}
+			}
+		},
+		{
+			"name": "steve_left_leg_2nd_layer",
+			"from": [7.5, -1, 5.5],
+			"to": [12.5, 12, 10.5],
+			"faces": {
+				"north": {"uv": [3.01, 13.01, 3.99, 15.99], "texture": "#skin"},
+				"east": {"uv": [2.01, 13.01, 2.99, 15.99], "texture": "#skin"},
+				"south": {"uv": [1.01, 13.01, 1.99, 15.99], "texture": "#skin"},
+				"west": {"uv": [0.01, 13.01, 0.99, 15.99], "texture": "#skin"},
+				"up": {"uv": [0, 0, 1, 1], "texture": "#skin"},
+				"down": {"uv": [2.01, 13.01, 2.99, 11.99], "texture": "#skin"}
+			}
+		}
+	],
+	"display": {
+		"head": {
+			"rotation": [0, 180, 0],
+			"translation": [0, -27.37, 0],
+			"scale": [1.75, 1.75, 1.75]
+		}
+	}
+}

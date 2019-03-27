@@ -1,0 +1,11 @@
+{
+	"parent": "origami-games:artefact/skin/skulls/template_skull",
+	"textures": {
+		"north": "origami-games:artefact/skin/skulls/rat/north",
+		"down": "origami-games:artefact/skin/skulls/rat/down",
+		"east": "origami-games:artefact/skin/skulls/rat/east",
+		"south": "origami-games:artefact/skin/skulls/rat/south",
+		"up": "origami-games:artefact/skin/skulls/rat/up",
+		"west": "origami-games:artefact/skin/skulls/rat/west"
+	}
+}

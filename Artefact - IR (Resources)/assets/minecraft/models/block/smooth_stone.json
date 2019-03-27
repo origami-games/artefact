@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "artefact:block/reinforced_stone"
+        "all": "origami-games:artefact/block/reinforced_stone"
     }
 }

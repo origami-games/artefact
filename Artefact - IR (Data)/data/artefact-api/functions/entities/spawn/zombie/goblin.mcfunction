@@ -1,3 +1,0 @@
-#spawns a zombie
-
-summon minecraft:zombie ~ ~ ~ {Tags:["mob","sounds","entity.artefact.goblin"],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{Unbreakable:1b,artefact:{no_pickup:1b},AttributeModifiers:[],display:{color:8439583}}},{id:"minecraft:leather_leggings",Count:1b,tag:{Unbreakable:1b,artefact:{no_pickup:1b},AttributeModifiers:[],display:{color:8439583}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{Unbreakable:1b,artefact:{no_pickup:1b},AttributeModifiers:[],display:{color:8439583}}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:4,artefact:{no_pickup:1b}}}],CustomName:'{"translate":"entity.artefact.goblin","color":"dark_green"}',Attributes:[{Name:"generic.movementSpeed",Base:0.15d}],DeathTime:19,IsBaby:1b,Silent:1b}

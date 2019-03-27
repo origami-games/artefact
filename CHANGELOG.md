@@ -2,11 +2,39 @@ Changelog
 =========
 
 -----
+## [Source v0.0.0.8-pre (build 8)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.8-pre.zip)
+### Changes
+#### Gameplay
+- Added lower shields
+- Removed French support as it is hard to keep it up with frequent feature additions
+
+#### Abilities
+- Cooldowns are now per-ability
+  - Coloured the boss bar display per-tier
+  - Boss bar display to be changed as a result
+- Added `Shield Bash`
+  - The player can flick their camera quickly upwards to smack whatever entities are around them. This doesn’t deal much damage, but a tonne of knockback. Can only be activated if the player has a shield (any type) in their offhand.
+- Added audiovisuals to Energy Sucker Punch
+  - 'Charge-up' sound (plays when timer starts)
+  - Activation particles
+
+#### Entities
+- Reduced goblin health to `6` points (`3` hearts)
+- Capped max xp orb entity count to `50`
+
+#### Technical
+- Renamed all artefact root folders
+  - In resource pack - `/artefact/` to `/origami-games/artefact/`
+  - In data pack - `artefact-<category>:` to `origami-games:artefact/<category>/`
+- Re-written stuns system [`#12`](https://github.com/origami-games/imperius-return/issues/12)
+  - Now modular [(see issue)](https://github.com/origami-games/imperius-return/issues/12)
+
+-----
 
 ## [Source v0.0.0.7-pre (build 7)](https://github.com/ArtefactDev/imperius-return/archive/src-v0.0.0.7-pre.zip)
 ### Bug Fixes
 - [[#10]](https://github.com/ArtefactDev/imperius-return/issues/10) Goblin summon button in command menu references wrong function
-- [[#11]](https://github.com/ArtefactDev/imperius-return/issues/11) Shields don't have lore applied when health is normal (10 hearts)
+- [[#11]](https://github.com/ArtefactDev/imperius-return/issues/11) Shields don't have lore applied when health is normal (10
 
 ### Changes
 #### Gameplay
@@ -37,14 +65,14 @@ Changelog
 - Slot selection system to be
 - Select an ability slot and right-click to use
 - Added `Rage`
-  - Sneak and flick your head up quickly, then attack a mob to gain strength, speed and regeneration for 4 seconds
+  - Sneak and flick your head up quickly, then attack a mob to gain strength, speed and regeneration for 4 seconds.
 - Added `Indomitable Stomp`
-  - Launches you into the sky, only to be abruptly pulled back down to the floor with a thud, stunning nearby mobs
+  - Launches you into the sky, only to be abruptly pulled back down to the floor with a thud, stunning nearby mobs.
   - Icon texture to be changed
 - Added `Energy Sucker Punch`
-  - The next enemy hit will receive +8 damage and the player will receive 2x the damage dealt as energy, as long as the amount of damage dealt is no more than 50
+  - The next enemy hit will receive +8 damage and the player will receive 2x the damage dealt as energy, as long as the amount of damage dealt is no more than 50.
 - Added `Rush`
-  - When used, the player gets 4 seconds of speed. If the player hits an enemy while they still have that effect, within those 4 seconds, the amplifier for the speed will increase by 1 tier and 1 extra second (caps at `Speed V`)
+  - When used, the player gets 4 seconds of speed. If the player hits an enemy while they still have that effect, within those 4 seconds, the amplifier for the speed will increase by 1 tier and 1 extra second (caps at `Speed V`).
 
 #### Entities
 - Goblins now make adult zombie damage sounds

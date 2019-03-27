@@ -1,0 +1,6 @@
+{
+    "parent": "origami-games:artefact/ability_slot/template",
+    "textures": {
+        "layer0": "origami-games:artefact/ability_slot/indomitable_stomp"
+    }
+}
