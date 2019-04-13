@@ -1,22 +1,17 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: "[<VERSION>/<CATEGORY>] <TITLE>"
+title: ""
 labels: bug
 assignees: ''
 
 ---
 
-> Categories:
->  Gameplay
->  Entities
->  Admin
->  Textures
->  Inventory
->  Miscellaneous
+**Summary**
+<A clear and concise description of what the bug is.>
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Affected Version/s**
+
 
 **To Reproduce**
 Steps to reproduce the behavior:
@@ -34,6 +29,3 @@ If applicable, add screenshots to help explain your problem.
 **Environment**
 Singleplayer? Multiplayer?
 Game version?
-
-**Additional context**
-Add any other context about the problem here.
