@@ -28,15 +28,6 @@ tag @e[tag=mob_bottom,nbt=!{Passengers:[{}]}] add remove
 
 tag @e[type=slime,tag=!left_click,tag=!mob] add remove
 
-#NPCs
-#TODO - more than 1 NPC in the world at a time
-tp @e[tag=npc.player.andante,limit=1] @e[tag=npc.player.andante.pilot,limit=1]
-tp @e[tag=npc.player.razorsharp,limit=1] @e[tag=npc.player.razorsharp.pilot,limit=1]
-tp @e[tag=npc.player.toffeemax,limit=1] @e[tag=npc.player.toffeemax.pilot,limit=1]
-
-execute as @e[tag=npc.invulnerable] run data merge entity @s {Health:20.0f}
-execute as @e[tag=npc.look] at @s run function origami-games:artefact/api/npcs/look
-
 #mobs
 ## spawning (SPREAD AND SPAWN CHECK CANNOT BE RAN IN THE SAME SUBTICK)
 execute as @e[type=minecraft:armor_stand,tag=spawn_mob] at @s run function origami-games:artefact/api/entities/spread
@@ -63,6 +54,7 @@ execute as @e[type=minecraft:item] run function origami-games:artefact/api/items
 
 #prevent left-click entity suffocation
 execute as @e[type=minecraft:slime,tag=left_click,nbt=!{Pos:[0.5d,0.0d,0.5d]}] at @s unless entity @p[distance=..3,gamemode=!spectator] run data merge entity @s {DeathLootTable:"minecraft:empty",Size:0,Health:0.0f,DeathTime:19s}
+data remove entity @e[type=minecraft:slime,tag=left_click,limit=1] Fire
 #create left-click if no left-click is found
 execute unless entity @e[tag=left_click] run function origami-games:artefact/api/action_detection/create_click
 #remove left-click children

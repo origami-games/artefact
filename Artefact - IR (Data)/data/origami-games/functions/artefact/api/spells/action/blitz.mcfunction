@@ -3,12 +3,15 @@
 #called by origami-games:artefact/api/spells/activate_action
 
 #audiovisuals
-#no audiovisuals set
+playsound minecraft:entity.bat.takeoff player @a[distance=..20] ~ ~ ~ 100 1.25 1
+
+particle minecraft:cloud ~ ~ ~ .5 0 .5 0 100 normal @a
 
 #functionality
 function origami-games:artefact/api/spells/visual/blitz/lightning
 
-effect give @s minecraft:levitation 1 19 true
+effect give @s minecraft:levitation 1 0 true
+effect give @s minecraft:jump_boost 4 255 true
 effect give @s minecraft:resistance 4 255 true
 
 #text

@@ -8,6 +8,9 @@ execute if entity @s[nbt={SelectedItem:{tag:{artefact:{treasure_bag:{}}}}}] run 
 #spells
 execute if entity @s[gamemode=!spectator,nbt={SelectedItem:{tag:{artefact:{can_right_click:1b}}}}] run function origami-games:artefact/core/player/holding_item/spells/can_right_click
 
+#items
+execute if entity @s[gamemode=!spectator,nbt={SelectedItem:{tag:{artefact:{item:"throwing_knife"}}}}] run function origami-games:artefact/api/items/weapons/melee/throwing_knife/throw
+
 #abilities
 function origami-games:artefact/api/abilities/check_action
 

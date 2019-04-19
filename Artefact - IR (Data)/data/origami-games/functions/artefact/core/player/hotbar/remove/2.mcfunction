@@ -3,9 +3,11 @@
 #called by origami-games:artefact/core/player/hotbar/remove/check
 
 #store slot in item entity
-execute if entity @s[nbt={Inventory:[{Slot:2b}]}] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:1,artefact:{hotbar_replacement:1b}}},Tags:["slot.2","no_pickup"]}
+execute if entity @s[nbt={Inventory:[{Slot:2b}]}] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:1,artefact:{hotbar_replacement:1b}}},Tags:["slot.2","no_pickup"],Owner:{L:1,M:2}}
+data modify entity @e[type=minecraft:item,tag=slot.2,sort=nearest,limit=1] Owner.L set from entity @s UUIDLeast
+data modify entity @e[type=minecraft:item,tag=slot.2,sort=nearest,limit=1] Owner.M set from entity @s UUIDMost
 data modify entity @e[type=minecraft:item,tag=slot.2,sort=nearest,limit=1] Item merge from entity @s Inventory[{Slot:2b}]
-data remove entity @e[type=minecraft:item,tag=slot.2,sort=nearest,limit=1] Item.tag.CustomModelData
+data remove entity @e[type=minecraft:item,tag=slot.2,sort=nearest,limit=1,nbt={Item:{tag:{CustomModelData:1,id:"minecraft:stick",artefact:{hotbar_replacement:1b}}}}] Item.tag.CustomModelData
 data remove entity @e[type=minecraft:item,tag=slot.2,sort=nearest,limit=1] Item.tag.artefact.hotbar_replacement
 
 execute store result score artefact_tag_count hotbar_counts run data get entity @e[type=minecraft:item,tag=slot.2,sort=nearest,limit=1] Item.tag.artefact

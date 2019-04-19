@@ -4,7 +4,6 @@
         "layer0": "item/glowstone_dust"
     },
     "overrides": [
-                { "predicate": {"custom_model_data": 1}, "model": "origami-games:artefact/item/pixie_dust"},
-                { "predicate": {"custom_model_data": 2}, "model": "origami-games:artefact/entity/pixie"}
+                { "predicate": {"custom_model_data": 1}, "model": "origami-games:artefact/item/pixie_dust"}
     ]
 }

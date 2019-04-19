@@ -1,0 +1,6 @@
+{
+    "parent": "origami-games:artefact/ability_slot/base",
+    "textures": {
+        "layer0": "origami-games:artefact/ability_slot/snake_step"
+    }
+}

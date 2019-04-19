@@ -1,0 +1,57 @@
+{
+	"textures": {
+		"shaft": "block/stone",
+		"head": "origami-games:artefact/item/hammer"
+	},
+	"elements": [
+		{
+			"from": [2, 10, 4],
+			"to": [14, 14, 12],
+			"faces": {
+				"north": {"uv": [0, 0, 12, 4], "texture": "#head"},
+				"east": {"uv": [0, 4, 8, 8], "texture": "#head"},
+				"south": {"uv": [0, 0, 12, 4], "texture": "#head"},
+				"west": {"uv": [0, 4, 8, 8], "texture": "#head"},
+				"up": {"uv": [0, 8, 12, 16], "texture": "#head"},
+				"down": {"uv": [0, 8, 12, 16], "texture": "#head"}
+			}
+		},
+		{
+			"from": [7, 0, 7],
+			"to": [9, 10, 9],
+			"faces": {
+				"north": {"uv": [0, 0, 2, 10], "texture": "#shaft"},
+				"east": {"uv": [6, 0, 8, 10], "texture": "#shaft"},
+				"south": {"uv": [2, 0, 4, 10], "texture": "#shaft"},
+				"west": {"uv": [4, 0, 6, 10], "texture": "#shaft"},
+				"up": {"uv": [0, 0, 2, 2], "texture": "#shaft"},
+				"down": {"uv": [2, 0, 4, 2], "texture": "#shaft"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 90, 0],
+			"translation": [0, 2.75, 0]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 90, 0]
+		},
+		"firstperson_righthand": {
+			"rotation": [-20, -63, 0],
+			"translation": [0, 6.75, -0.5],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"gui": {
+			"rotation": [20, 45, 0],
+			"scale": [0.9, 0.9, 0.9]
+		},
+		"head": {
+			"rotation": [0, 90, 0],
+			"translation": [0, 10, 0]
+		},
+		"fixed": {
+			"rotation": [0, 90, 0]
+		}
+	}
+}

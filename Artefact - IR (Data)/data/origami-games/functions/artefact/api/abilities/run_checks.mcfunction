@@ -32,6 +32,14 @@ execute if score flick.timer abilities matches 1.. if entity @s[gamemode=creativ
 ## indomitable stomp
 ### landing check
 execute if entity @s[tag=ability.indomitable_stomp.land,nbt={OnGround:1b}] run function origami-games:artefact/api/abilities/indomitable_stomp/land
+## pin
+### pushing
+execute if score pin.timer abilities matches 1.. run function origami-games:artefact/api/abilities/pin/push_entities
+## snake step
+### teleport count
+execute if score snake_step.teleport_count abilities matches 0.. run function origami-games:artefact/api/abilities/snake_step/teleport
+### landing
+execute unless score snake_step.teleport_count abilities matches 0.. if entity @s[tag=ability.snake_step.land,nbt={OnGround:1b}] run function origami-games:artefact/api/abilities/snake_step/land
 ## energy sucker punch
 ### timer
 execute unless score esp.timer abilities matches ..0 run scoreboard players remove esp.timer abilities 1

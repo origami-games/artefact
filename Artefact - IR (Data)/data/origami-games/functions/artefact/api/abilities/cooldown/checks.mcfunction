@@ -8,6 +8,8 @@ bossbar set origami-games:artefact/api/abilities/cooldown/indomitable_stomp play
 bossbar set origami-games:artefact/api/abilities/cooldown/energy_sucker_punch players @s
 bossbar set origami-games:artefact/api/abilities/cooldown/rush players @s
 bossbar set origami-games:artefact/api/abilities/cooldown/shield_bash players @s
+bossbar set origami-games:artefact/api/abilities/cooldown/snake_step players @s
+bossbar set origami-games:artefact/api/abilities/cooldown/pin players @s
 
 #check visibility
 execute if score rage ability_cooldown matches 1.. run function origami-games:artefact/api/abilities/cooldown/rage
@@ -24,3 +26,9 @@ execute unless score rush ability_cooldown matches 1.. run bossbar set origami-g
 
 execute if score shield_bash ability_cooldown matches 1.. run function origami-games:artefact/api/abilities/cooldown/shield_bash
 execute unless score shield_bash ability_cooldown matches 1.. run bossbar set origami-games:artefact/api/abilities/cooldown/shield_bash visible false
+
+execute if score snake_step ability_cooldown matches 1.. run function origami-games:artefact/api/abilities/cooldown/snake_step
+execute unless score snake_step ability_cooldown matches 1.. run bossbar set origami-games:artefact/api/abilities/cooldown/snake_step visible false
+
+execute if score pin ability_cooldown matches 1.. run function origami-games:artefact/api/abilities/cooldown/pin
+execute unless score pin ability_cooldown matches 1.. run bossbar set origami-games:artefact/api/abilities/cooldown/pin visible false

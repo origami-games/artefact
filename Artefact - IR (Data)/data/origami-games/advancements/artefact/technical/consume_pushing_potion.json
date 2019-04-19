@@ -1,0 +1,15 @@
+{
+  "criteria":{
+    "consume_pushing_potion":{
+      "trigger":"minecraft:consume_item",
+      "conditions":{
+        "item":{
+          "nbt":"{artefact:{Potion:\"artefact:pushing\"}}"
+        }
+      }
+    }
+  },
+ "rewards":{
+   "function":"origami-games:artefact/api/potions/pushing/check_mana"
+ }
+}

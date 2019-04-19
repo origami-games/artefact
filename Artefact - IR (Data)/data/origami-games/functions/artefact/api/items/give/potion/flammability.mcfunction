@@ -1,0 +1,1 @@
+give @s minecraft:potion{artefact:{Potion:"artefact:flammability"},Potion:"minecraft:thick",CustomPotionColor:11546150,HideFlags:33b,Enchantments:[{id:"minecraft:unbreaking",lvl:0s}],display:{Name:'{"translate":"item.artefact.potion.flammability","italic":false,"color":"aqua"}',Lore:['{"translate":"item.artefact.potion.flammability.lore","italic":false,"color":"blue"}']}}

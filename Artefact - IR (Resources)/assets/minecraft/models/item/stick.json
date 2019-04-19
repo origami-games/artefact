@@ -4,10 +4,11 @@
         "layer0": "item/stick"
     },
     "overrides": [
-                { "predicate": {"custom_model_data": 1}, "model": "origami-games:artefact/item/blank"},
+                { "predicate": {"custom_model_data": 1}, "model": "origami-games:artefact/blank"},
 
                 { "predicate": {"custom_model_data": 2}, "model": "origami-games:artefact/entity/rat"},
                 { "predicate": {"custom_model_data": 3}, "model": "origami-games:artefact/entity/butterfly"},
-                { "predicate": {"custom_model_data": 4}, "model": "origami-games:artefact/entity/goblin"}
+                { "predicate": {"custom_model_data": 4}, "model": "origami-games:artefact/entity/goblin"},
+                { "predicate": {"custom_model_data": 5}, "model": "origami-games:artefact/entity/pixie"}
     ]
 }

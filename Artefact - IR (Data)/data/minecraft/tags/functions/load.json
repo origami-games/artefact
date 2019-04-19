@@ -1,5 +1,5 @@
 {
     "values": [
-        "origami-games:artefact/core/load"
+        "#origami-games:load"
     ]
 }

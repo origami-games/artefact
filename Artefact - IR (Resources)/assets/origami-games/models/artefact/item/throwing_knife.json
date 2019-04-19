@@ -1,0 +1,17 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "origami-games:artefact/item/throwing_knife"
+	},
+	"display": {
+		"thirdperson_lefthand": {
+			"rotation": [0, 0, 90],
+			"translation": [-2, 6, 8.5],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"head": {
+			"rotation": [-45, 90, 0],
+			"translation": [0, -29, -3.25]
+		}
+	}
+}

@@ -1,0 +1,1 @@
+give @s minecraft:potion{artefact:{Potion:"artefact:instant_energy"},Potion:"minecraft:thick",CustomPotionColor:9552713,HideFlags:33b,Enchantments:[{id:"minecraft:unbreaking",lvl:0s}],display:{Name:'{"translate":"item.artefact.potion.energy","italic":false,"color":"aqua"}',Lore:['{"translate":"item.artefact.potion.energy.lore","italic":false,"color":"blue"}']}}

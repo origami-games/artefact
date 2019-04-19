@@ -1,0 +1,15 @@
+{
+  "criteria":{
+    "consume_flammability_potion":{
+      "trigger":"minecraft:consume_item",
+      "conditions":{
+        "item":{
+          "nbt":"{artefact:{Potion:\"artefact:flammability\"}}"
+        }
+      }
+    }
+  },
+ "rewards":{
+   "function":"origami-games:artefact/api/potions/flammability/check_mana"
+ }
+}

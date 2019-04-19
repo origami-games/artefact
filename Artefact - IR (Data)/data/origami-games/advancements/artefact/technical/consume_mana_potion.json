@@ -1,0 +1,15 @@
+{
+  "criteria":{
+    "consume_mana_potion":{
+      "trigger":"minecraft:consume_item",
+      "conditions":{
+        "item":{
+          "nbt":"{artefact:{Potion:\"artefact:instant_mana\"}}"
+        }
+      }
+    }
+  },
+ "rewards":{
+   "function":"origami-games:artefact/api/potions/mana/consumed"
+ }
+}

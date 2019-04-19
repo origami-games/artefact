@@ -2,9 +2,6 @@
 #@s - primary player
 #called by origami-games:artefact/core/player/tick
 
-tp @e[type=minecraft:slime,tag=left_click] 0 -512 0
-function origami-games:artefact/api/action_detection/create_click
-
 #audiovisuals
 playsound minecraft:ui.button.click player @s ~ ~ ~ .25 2 1
 

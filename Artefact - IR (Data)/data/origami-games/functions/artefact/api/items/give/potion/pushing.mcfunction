@@ -1,0 +1,1 @@
+give @s minecraft:potion{artefact:{Potion:"artefact:pushing"},Potion:"minecraft:thick",CustomPotionColor:13786000,HideFlags:33b,Enchantments:[{id:"minecraft:unbreaking",lvl:0s}],display:{Name:'{"translate":"item.artefact.potion.pushing","italic":false,"color":"aqua"}',Lore:['{"translate":"item.artefact.potion.pushing.lore","italic":false,"color":"blue"}']}}

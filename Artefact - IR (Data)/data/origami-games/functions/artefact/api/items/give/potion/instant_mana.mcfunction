@@ -1,0 +1,1 @@
+give @s minecraft:potion{artefact:{Potion:"artefact:instant_mana"},Potion:"minecraft:thick",CustomPotionColor:3836360,HideFlags:33b,Enchantments:[{id:"minecraft:unbreaking",lvl:0s}],display:{Name:'{"translate":"item.artefact.potion.mana","italic":false,"color":"aqua"}',Lore:['{"translate":"item.artefact.potion.mana.lore","italic":false,"color":"blue"}']}}

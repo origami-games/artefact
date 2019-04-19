@@ -1,0 +1,1 @@
+give @s minecraft:carrot_on_a_stick{display:{Name:'{"translate":"item.artefact.throwing_knife","italic":false}'},artefact:{item:"throwing_knife"},CustomModelData:32,AttributeModifiers:[{Name:"generic.attackDamage",AttributeName:"generic.attackDamage",Amount:4.0d,Operation:0,UUIDMost:4,UUIDLeast:4,Slot:mainhand}]}

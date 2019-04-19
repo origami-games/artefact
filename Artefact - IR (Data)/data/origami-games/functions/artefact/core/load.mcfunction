@@ -37,6 +37,19 @@ scoreboard objectives add flick_math dummy "Flick Maths"
 
 scoreboard objectives add stun.base dummy "Stun - Base (Timer)"
 scoreboard objectives add stun.rise dummy "Stun - Rise (Timer)"
+scoreboard objectives add stun.glowing dummy "Stun - Glowing (Timer)"
+
+scoreboard objectives add custom_potion dummy "Custom Potion Timers"
+scoreboard objectives add pot.energy.xp_ra dummy "Energy Potion Experience Orb Random Movement"
+
+scoreboard objectives add wpn.thr_kni dummy "Throwing Knife (General)"
+scoreboard objectives add wpn.thr_kni.age dummy "Throwing Knife (Age)"
+scoreboard objectives add wpn.thr_kni.x dummy "Throwing Knife (X)"
+scoreboard objectives add wpn.thr_kni.y dummy "Throwing Knife (Y)"
+scoreboard objectives add wpn.thr_kni.z dummy "Throwing Knife (Z)"
+scoreboard objectives add wpn.thr_kni.dx dummy "Throwing Knife (DX)"
+scoreboard objectives add wpn.thr_kni.dy dummy "Throwing Knife (DY)"
+scoreboard objectives add wpn.thr_kni.dz dummy "Throwing Knife (DZ)"
 
 scoreboard objectives add lifetime dummy "Entity Lifetimes"
 
@@ -49,10 +62,11 @@ scoreboard objectives add max_hearts dummy "Max Hearts"
 scoreboard objectives add max_health dummy "Max Health"
 
 
-execute unless score slot_1 abilities matches 0.. run scoreboard players set slot_1 abilities 1
-execute unless score slot_2 abilities matches 0.. run scoreboard players set slot_2 abilities 2
-execute unless score slot_3 abilities matches 0.. run scoreboard players set slot_3 abilities 3
+execute unless score slot_1 abilities matches 1.. run scoreboard players set slot_1 abilities 1
+execute unless score slot_2 abilities matches 2.. run scoreboard players set slot_2 abilities 2
+execute unless score slot_3 abilities matches 3.. run scoreboard players set slot_3 abilities 3
 
+scoreboard players set snake_step.teleport_count.start abilities 25
 scoreboard players set flick.timer.start abilities 50
 scoreboard players set esp.timer.start abilities 50
 scoreboard players set esp.math.multiplier abilities 2
@@ -61,12 +75,15 @@ scoreboard players set esp.math.threshold.divide abilities 100
 scoreboard players set cooldown.start abilities 80
 function origami-games:artefact/api/abilities/set_cooldowns
 
+scoreboard players set pushing.start custom_potion 200
+scoreboard players set flammability.start custom_potion 200
 
 scoreboard players set xp_orb_count.threshold energy 50
 execute unless score level energy matches 0.. run scoreboard players set level energy 0
 
 scoreboard players set threshold stun.base 50
 scoreboard players set threshold stun.rise 50
+scoreboard players set threshold stun.glowing 50
 
 scoreboard players set threshold flick_math 26
 scoreboard players set y_rot.threshold shield 50
@@ -107,8 +124,11 @@ execute store result bossbar origami-games:artefact/api/abilities/energy_sucker_
 
 #initialise teams
 team add no_collision
-
 team modify no_collision collisionRule never
+
+team add stuns.no_coll
+team modify stuns.no_coll collisionRule never
+team modify stuns.no_coll color green
 
 #gamerules
 gamerule doDaylightCycle false

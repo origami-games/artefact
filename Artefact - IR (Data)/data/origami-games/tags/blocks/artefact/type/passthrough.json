@@ -1,7 +1,16 @@
 {
     "values": [
-        "minecraft:air",
-        "minecraft:cave_air",
-        "minecraft:void_air"
+        "#minecraft:air",
+        "#minecraft:banners",
+        "#minecraft:signs",
+        "#minecraft:saplings",
+        "#minecraft:buttons",
+        "minecraft:water",
+        "minecraft:ladder",
+        "minecraft:torch",
+        "minecraft:redstone_torch",
+        "minecraft:grass",
+        "minecraft:tall_grass",
+        "minecraft:lever"
     ]
 }

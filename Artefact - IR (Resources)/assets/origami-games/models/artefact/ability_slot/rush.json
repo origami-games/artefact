@@ -1,5 +1,5 @@
 {
-    "parent": "origami-games:artefact/ability_slot/template",
+    "parent": "origami-games:artefact/ability_slot/base",
     "textures": {
         "layer0": "origami-games:artefact/ability_slot/rush"
     }

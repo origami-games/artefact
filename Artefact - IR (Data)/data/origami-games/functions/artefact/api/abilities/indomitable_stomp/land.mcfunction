@@ -10,15 +10,14 @@ playsound minecraft:block.anvil.land player @a[distance=..20] ~ ~ ~ 100 1 1
 particle minecraft:block minecraft:barrel ~ ~ ~ 1.5 .1 1.5 0 200 force @a
 
 #functionality
-function origami-games:artefact/api/stuns/effect/base
-function origami-games:artefact/api/stuns/effect/rise
+function origami-games:artefact/api/abilities/indomitable_stomp/stun
 
 effect give @e[type=!#origami-games:artefact/api/undead,type=!#origami-games:artefact/api/abilities/indomitable_stomp/no_target,distance=..6] minecraft:instant_damage 1 0 true
 effect give @e[type=#origami-games:artefact/api/undead,type=!#origami-games:artefact/api/abilities/indomitable_stomp/no_target,distance=..6] minecraft:instant_health 1 0 true
 
 #clear effects
 effect clear @s minecraft:levitation
-effect clear @s minecraft:resistance
+effect clear @s minecraft:jump_boost
 
 #remove tag
 tag @s remove ability.indomitable_stomp.land

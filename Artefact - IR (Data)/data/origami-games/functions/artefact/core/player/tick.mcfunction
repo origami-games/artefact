@@ -6,12 +6,10 @@
 ## general
 gamemode adventure @s[gamemode=survival]
 scoreboard players set loaded general 2
-
+## bossbars
 bossbar set origami-games:artefact/api/shield/timer players @s
 bossbar set origami-games:artefact/api/abilities/rage/timer players @s
 bossbar set origami-games:artefact/api/abilities/energy_sucker_punch/timer players @s
-## other functions
-#function origami-games:artefact/api/check_health_items
 
 #tutorial
 execute unless entity @s[tag=tutorial.spells] if data entity @s SelectedItem.tag.artefact.spells run function origami-games:artefact/api/tutorial/spells
@@ -97,6 +95,12 @@ function origami-games:artefact/core/player/offhand/run_checks
 function origami-games:artefact/api/stuns/run_checks
 function origami-games:artefact/core/player/hotbar/remove/check
 
+#potions
+function origami-games:artefact/api/potions/run_checks
+
+#weapons
+function origami-games:artefact/api/items/weapons/run_checks
+
 #max health score
 scoreboard players operation @s max_health = @s max_hearts
 scoreboard players operation @s max_health *= heart_to_health_multiplier max_health
@@ -109,7 +113,7 @@ execute store result score @s sel_hotbar_slot run data get entity @s SelectedIte
 execute unless score previous sel_hotbar_slot = @s sel_hotbar_slot run playsound minecraft:entity.arrow.shoot player @s ~ ~ ~ .3 2 1
 
 #indicate to non-primary players who the primary player is
-particle minecraft:firework ~ ~2.25 ~ 0 0 0 0 1 force @a[tag=!primary]
+execute positioned ~ ~2.25 ~ run particle minecraft:firework ^ ^ ^-.25 0 0 0 0 1 force @a[tag=!primary]
 
 #damage dealt
 execute if score @s damage_dealt matches 1.. run function origami-games:artefact/api/action_detection/damaged_entity

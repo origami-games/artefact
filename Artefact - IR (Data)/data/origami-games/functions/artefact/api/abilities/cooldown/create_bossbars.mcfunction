@@ -36,3 +36,17 @@ bossbar set origami-games:artefact/api/abilities/cooldown/shield_bash style prog
 bossbar set origami-games:artefact/api/abilities/cooldown/shield_bash color green
 bossbar set origami-games:artefact/api/abilities/cooldown/shield_bash visible false
 execute store result bossbar origami-games:artefact/api/abilities/cooldown/shield_bash max run scoreboard players get shield_bash.start ability_cooldown
+
+bossbar add origami-games:artefact/api/abilities/cooldown/snake_step ""
+bossbar set origami-games:artefact/api/abilities/cooldown/snake_step name ""
+bossbar set origami-games:artefact/api/abilities/cooldown/snake_step style progress
+bossbar set origami-games:artefact/api/abilities/cooldown/snake_step color blue
+bossbar set origami-games:artefact/api/abilities/cooldown/snake_step visible false
+execute store result bossbar origami-games:artefact/api/abilities/cooldown/snake_step max run scoreboard players get snake_step.start ability_cooldown
+
+bossbar add origami-games:artefact/api/abilities/cooldown/pin ""
+bossbar set origami-games:artefact/api/abilities/cooldown/pin name ""
+bossbar set origami-games:artefact/api/abilities/cooldown/pin style progress
+bossbar set origami-games:artefact/api/abilities/cooldown/pin color blue
+bossbar set origami-games:artefact/api/abilities/cooldown/pin visible false
+execute store result bossbar origami-games:artefact/api/abilities/cooldown/pin max run scoreboard players get pin.start ability_cooldown

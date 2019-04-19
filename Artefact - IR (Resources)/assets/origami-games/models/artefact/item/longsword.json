@@ -1,0 +1,22 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "origami-games:artefact/item/longsword"
+	},
+	"display": {
+		"thirdperson_lefthand": {
+			"rotation": [-45, 59, 100],
+			"translation": [-6, -2.5, 4.5],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 113, 19],
+			"translation": [2.25, 5.5, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"head": {
+			"rotation": [180, 0, 0],
+			"translation": [-6.25, 3, -2.75]
+		}
+	}
+}
