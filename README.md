@@ -1,4 +1,4 @@
-Artefact - Imperius' Return
+Artefact
 ===========================
 
 ### Brief Summary
